@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gallery</title>
+
+</head>
+<link rel="stylesheet" href="gallery.css">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="tch.jpg" type="image/x-icon">
+</head>
+<body style="background-color: rgb(218, 213, 213);">
+	
+  <header>
+    <div class="header_img">
+      <img src="tch.jpg" class="header_logo"></img>
+      <img src="nom.jpg" class="header_icon"></img>   
+    </div>
+
+    <div class="menu_bar">
+
+      <button for="menu_checkbox" class="collapse">
+        <hr class="collapse_line" id="line1">
+        <hr class="collapse_line" id="line2">
+        <hr class="collapse_line" id="line3">
+      </button>
+
+      <script>
+        document.querySelector('.collapse').addEventListener('click', function() {
+            this.classList.toggle('active');
+          });
+
+      </script>
+            
+      <div class="collapse_content">
+
+        <div class="dropdown">
+          <a href="index.html">
+              <button class="dropbtn" id="the_home">Home</button>
+          </a>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">About</button>
+            <div class="dropdown-content" style="position: absolute; left: -50px;">
+              <a href="about.html">History</a>
+              <a href="govboard.html">Governing Board</a>
+              <a href="Principal.html">Principal’s Message</a>
+              <a href="anthem.html">Anthem/Mission/Vision</a>
+              <a href="gallery.html">Gallery</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">School</button>
+            <div class="dropdown-content" style="position: absolute; left: -50px;">
+              <a href="curricullum.html">Academic Curricullum</a>
+              <a href="extra curricullum.html">Co-Curricullum</a>
+              <a href="#">School-Calender</a>
+              <a href="#">List Of Books</a>
+              <a href="religios.html">Religious</a>
+            </div>
+        </div>
+
+
+        <div class="dropdown">
+            <button class="dropbtn">Admission</button>
+            <div class="dropdown-content" id="admission" style="position: absolute; left: -40px;">
+              <a href="admission.html">Admission Process</a>
+              <a href="#">Fees/Payment</a>
+            </div>
+        </div>
+
+
+        <div class="dropdown">
+          <button class="dropbtn">Login Portal</button>
+          <div class="dropdown-content" id="portal" style="position: absolute; left: -40px;">
+            <a href="portal.html">Parent Portal</a>
+            <a href="portal.html">Teachers Portal</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </header>
+
+      <!-- Collapse Script -->
+      <script>
+        // Add event listener to the button
+        const collapseButton = document.querySelector('.collapse');
+        const content = document.querySelector('.collapse_content');
+
+        collapseButton.addEventListener('click', () => {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+
+        var coll = document.getElementsByClassName("dropbtn");
+        var i;
+
+        for (i = 0; i < coll.length; i++)
+        {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+
+            if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+            }
+
+            else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+
+          });
+        }
+      </script>
+
+<img src="disa.jpg" class="gallery_img">
+<div class="banner"></div>
+<div class="banner_fill">
+  <h1>Gallery</h1>
+  <a href="index.html">Home</a>
+  <a href="#">Gallery</a>
+</div>
+
+<a href="anthem.html"><button id="prev">Previous</button></a> 
+<a href="curricullum.html"><button id="next">Next</button></a>
+
+<div class="our_gal">
+  <h1>Our Gallery</h1>
+  <hr id="hr_1">
+  <hr id="hr_2">
+</div>
+
+
+
+<div class="gallery">
+
+  <div class="first_col">
+
+    <div class="container1">
+      <img src="schoolboy.jpg" alt="someting" class="image1">
+      <div class="overlay1">
+        <div class="text1">
+          <h3>Image Description</h3>
+          <h5>2019 Footbal Competion</h5>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container2">
+      <img src="schoolboy.jpg" alt="someting" class="image2">
+      <div class="overlay2">
+        <div class="text2">
+            <h3>Image Description</h3>
+            <h5>2020 Inter-house Sport</h5>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container3">
+      <img src="schoolboy.jpg" alt="someting" class="image3">
+      <div class="overlay3">
+        <div class="text3">
+          <h3>Image Description</h3>
+          <h5>2019 Footbal Competion</h5>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container4">
+      <img src="schoolboy.jpg" alt="someting" class="image4">
+      <div class="overlay4">
+        <div class="text4">
+          <h3>Image Description</h3>
+          <h5>Excursion to Badagry</h5>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container5">
+      <img src="schoolboy.jpg" alt="someting" class="image5">
+      <div class="overlay5">
+        <div class="text5">
+          <h3>Image Description</h3>
+          <h5>2019 Footbal Competion</h5>
+        </div>
+      </div> 
+    </div>
+        
+        <div class="container6">
+          <img src="schoolboy.jpg" alt="someting" class="image6">
+          <div class="overlay6">
+            <div class="text6">
+              <h3>Image Description</h3>
+              <h5>2020 Inter-house Sport</h5>
+            </div>
+          </div> 
+        </div>
+        
+        <div class="container7">
+          <img src="schoolboy.jpg" alt="someting" class="image7">
+          <div class="overlay7">
+            <div class="text7">
+              <h3>Image Description</h3>
+              <h5>Excursion to Badagry</h5>
+            </div>
+          </div> 
+        </div>
+        
+        <div class="container8">
+          <img src="schoolboy.jpg" alt="someting" class="image8">
+          <div class="overlay8">
+            <div class="text8">
+              <h3>Image Description</h3>
+              <h5>2019 Footbal Competion</h5>
+            </div>
+          </div> 
+        </div>
+        
+        <div class="container9">
+          <img src="schoolboy.jpg" alt="someting" class="image9">
+          <div class="overlay9">
+            <div class="text9">
+              <h3>Image Description</h3>
+              <h5>Excursion to Badagry</h5>
+            </div>
+          </div> 
+        </div>
+
+        <div class="container10">
+          <img src="schoolboy.jpg" alt="someting" class="image10">
+          <div class="overlay10">
+            <div class="text10">
+              <h3>Image Description</h3>
+              <h5>2020 Inter-house Sport</h5>
+            </div>
+          </div> 
+        </div>
+  </div>
+</div>
+
+<!-- Second Column -->
+
+<div class="gallery2">
+  <div class="second_col">
+
+    <div class="container1">
+      <img src="schoolboy.jpg" alt="someting" class="image1">
+      <div class="overlay1">
+        <div class="text1">
+          <h3>Image Description</h3>
+          <h5>2019 Footbal Competion</h5>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container2">
+      <img src="schoolboy.jpg" alt="someting" class="image2">
+      <div class="overlay2">
+        <div class="text2">
+            <h3>Image Description</h3>
+            <h5>2020 Inter-house Sport</h5>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container3">
+      <img src="schoolboy.jpg" alt="someting" class="image3">
+      <div class="overlay3">
+        <div class="text3">
+          <h3>Image Description</h3>
+          <h5>2019 Footbal Competion</h5>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container4">
+      <img src="schoolboy.jpg" alt="someting" class="image4">
+      <div class="overlay4">
+        <div class="text4">
+          <h3>Image Description</h3>
+          <h5>Excursion to Badagry</h5>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container5">
+      <img src="schoolboy.jpg" alt="someting" class="image5">
+      <div class="overlay5">
+        <div class="text5">
+          <h3>Image Description</h3>
+          <h5>2019 Footbal Competion</h5>
+        </div>
+      </div> 
+    </div>
+        
+        <div class="container6">
+          <img src="schoolboy.jpg" alt="someting" class="image6">
+          <div class="overlay6">
+            <div class="text6">
+              <h3>Image Description</h3>
+              <h5>2020 Inter-house Sport</h5>
+            </div>
+          </div> 
+        </div>
+        
+        <div class="container7">
+          <img src="schoolboy.jpg" alt="someting" class="image7">
+          <div class="overlay7">
+            <div class="text7">
+              <h3>Image Description</h3>
+              <h5>Excursion to Badagry</h5>
+            </div>
+          </div> 
+        </div>
+        
+        <div class="container8">
+          <img src="schoolboy.jpg" alt="someting" class="image8">
+          <div class="overlay8">
+            <div class="text8">
+              <h3>Image Description</h3>
+              <h5>2019 Footbal Competion</h5>
+            </div>
+          </div> 
+        </div>
+        
+        <div class="container9">
+          <img src="schoolboy.jpg" alt="someting" class="image9">
+          <div class="overlay9">
+            <div class="text9">
+              <h3>Image Description</h3>
+              <h5>Excursion to Badagry</h5>
+            </div>
+          </div> 
+        </div>
+
+        <div class="container10">
+          <img src="schoolboy.jpg" alt="someting" class="image10">
+          <div class="overlay10">
+            <div class="text10">
+              <h3>Image Description</h3>
+              <h5>2020 Inter-house Sport</h5>
+            </div>
+          </div> 
+        </div>
+  </div>
+</div>
+
+<!-- Third Column -->
+
+<div class="gallery3">
+  <div class="third_col">
+
+    <div class="container1">
+      <img src="schoolboy.jpg" alt="someting" class="image1">
+      <div class="overlay1">
+        <div class="text1">
+          <h3>Image Description</h3>
+          <h5>2019 Footbal Competion</h5>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container2">
+      <img src="schoolboy.jpg" alt="someting" class="image2">
+      <div class="overlay2">
+        <div class="text2">
+            <h3>Image Description</h3>
+            <h5>2020 Inter-house Sport</h5>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container3">
+      <img src="schoolboy.jpg" alt="someting" class="image3">
+      <div class="overlay3">
+        <div class="text3">
+          <h3>Image Description</h3>
+          <h5>2019 Footbal Competion</h5>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container4">
+      <img src="schoolboy.jpg" alt="someting" class="image4">
+      <div class="overlay4">
+        <div class="text4">
+          <h3>Image Description</h3>
+          <h5>Excursion to Badagry</h5>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container5">
+      <img src="schoolboy.jpg" alt="someting" class="image5">
+      <div class="overlay5">
+        <div class="text5">
+          <h3>Image Description</h3>
+          <h5>2019 Footbal Competion</h5>
+        </div>
+      </div> 
+    </div>
+        
+        <div class="container6">
+          <img src="schoolboy.jpg" alt="someting" class="image6">
+          <div class="overlay6">
+            <div class="text6">
+              <h3>Image Description</h3>
+              <h5>2020 Inter-house Sport</h5>
+            </div>
+          </div> 
+        </div>
+        
+        <div class="container7">
+          <img src="schoolboy.jpg" alt="someting" class="image7">
+          <div class="overlay7">
+            <div class="text7">
+              <h3>Image Description</h3>
+              <h5>Excursion to Badagry</h5>
+            </div>
+          </div> 
+        </div>
+        
+        <div class="container8">
+          <img src="schoolboy.jpg" alt="someting" class="image8">
+          <div class="overlay8">
+            <div class="text8">
+              <h3>Image Description</h3>
+              <h5>2019 Footbal Competion</h5>
+            </div>
+          </div> 
+        </div>
+        
+        <div class="container9">
+          <img src="schoolboy.jpg" alt="someting" class="image9">
+          <div class="overlay9">
+            <div class="text9">
+              <h3>Image Description</h3>
+              <h5>Excursion to Badagry</h5>
+            </div>
+          </div> 
+        </div>
+
+        <div class="container10">
+          <img src="schoolboy.jpg" alt="someting" class="image10">
+          <div class="overlay10">
+            <div class="text10">
+              <h3>Image Description</h3>
+              <h5>2020 Inter-house Sport</h5>
+            </div>
+          </div> 
+        </div>
+  </div>
+</div>
+
+<section class="last_section">
+  <h3 class="contacts_caption">Our Contacts</h3>
+  <hr id="underline">
+  <img src="phone.webp" class="phone_icon">
+  <h3 class="contacts">+23467272829, +23495982443</h3>
+
+  <img src="fb.png" class="facebook_icon">
+  <a href="#" class="fb_link">crescentheightsoyo@facebook</a>
+
+  <img src="whatsapp image.png" class="whatsapp_icon">
+  <h3 class="what_contacts">+23467272829, +23495982443</h3>
+
+  <img src="e mail.png" class="email_icon">
+  <a href="#" class="email_link">crescentheight@gmail.com</a>
+  
+  <img src="tch.jpg" class="center_img">
+  <h2 class="center_caption">Crescent heights, Oyo.</h2>
+  <img src="MPL.png" alt="sobil_icon" class="sobil_icon">
+  <h5 class="sobil">DEVELOPED BY SOBIL</h5>
+  </div>
+
+  <h3 class="address_caption">Address</h3>
+  <hr id="underline1">
+  <address class="address_content">
+    Crescent Heights New site,
+    Opposite Cheif Imam House,Odo-Aarin,Ilora,Oyo,Oyo State,
+    Nigeria.
+  </address>
+
+  <h5 class="copyright">Copyright,2023.All right reserved by Crescent Heights</h5>
+
+  <a href="index.html">
+    <button class="bottom_next_button">
+      GO UP
+    </button>
+  </a>
+</section>
+
+
+</body>
