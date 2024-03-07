@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>about.html</title>
+
+</head>
+<link rel="stylesheet" href="principal.css">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="tch.jpg" type="image/x-icon">
+<style>
+  #prev {
+  position: absolute; 
+  top: 200px; 
+  left: auto;
+  width: 100px; 
+  height: 50px; 
+  margin-left: 10%; 
+  margin-top: auto; 
+  background-color: rgb(0, 0, 22);
+  color: azure;
+  text-align: center;
+  font-size: larger;
+  z-index: 2;
+  border: 2px solid rgb(0, 0, 22);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+#next {
+  position: absolute; 
+  top: 200px; 
+  right: auto;
+  width: 100px; 
+  height: 50px; 
+  margin-left: 80%; 
+  margin-top: -10px; 
+  background-color:  rgb(0, 0, 22);
+  color: azure;
+  text-align: center;
+  font-size: larger;
+  z-index: 2;
+  border: 2px solid  rgb(0, 0, 22);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+@media only screen and (max-width: 768px) {
+  #prev {
+  position: absolute; 
+  top: 150px; 
+  left: auto;
+  width: 80px; 
+  height: 20px; 
+  margin-left: 5%; 
+  margin-top: auto; 
+  font-size: small
+;
+}
+
+
+#next {
+  position: absolute; 
+  top: 160px; 
+  right: auto;
+  width: 80px; 
+  height: 20px; 
+  margin-left: 30%; 
+  margin-top: -10px; 
+  font-size: small
+}
+}
+
+.message {
+    position: relative;
+    left: 40%;
+    text-align: center;
+    width: 300px;
+    top: 150px;
+    color: red;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.principal_img {
+    position: absolute;
+    top: 420px;
+    left: 60%;
+    height: 300px;
+    width: 280px;
+    border-radius: 50%;
+}
+
+.q1{
+    position: relative;
+    top: 450px;
+    width: 50%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}    
+.q2{
+    position: relative;
+    top: 550px;
+    width: 80%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   }
+.q3{
+    position: relative;
+    top: 650px;
+    width: 80%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.q4{
+    position: relative;
+    top: 750px;
+    width: 80%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+blockquote{
+ margin-top: -250px;
+ margin-left: 240px;
+}
+
+@media only screen and (max-width: 768px) {
+    .message {
+        font-size: 20px;
+        width: 200px;
+        left: 20%;
+        margin-top: 80px;
+    }
+    .principal_img {
+        position: absolute;
+        top: 300px;
+        left: 20%;
+        height: 200px;
+        width: 180px;
+        border-radius: 50%;
+    }
+    
+    .q1{
+        top: 650px;
+        width: 100%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }    
+    .q2{
+        position: relative;
+        top: 550px;
+        width: 80%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       }
+    .q3{
+        position: relative;
+        top: 650px;
+        width: 80%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .q4{
+        position: relative;
+        top: 750px;
+        width: 80%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    blockquote{
+     margin-top: -250px;
+     margin-left: 50px;
+    }
+}
+
+
+
+
+.last_section {
+	position: relative;
+  display: block;
+  top: 800px;
+	bottom: auto;
+  left: auto;
+	width: 100%;
+  height: 350px;
+  background-color: rgb(0, 0, 22);
+  color: wheat;
+  overflow: hidden;
+  
+}
+
+ .contacts_caption {
+  position: relative;
+  top: 30px;
+  left: 10%;
+  color: white;
+}
+
+#underline {
+  width: 300px;
+  float: left;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+
+.phone_icon {
+  float: left;
+  position: absolute;
+  top: 120px;
+  left: 40px;
+  width:30px;
+  height:30px;
+}
+
+.contacts {
+  position: absolute;
+  top: 105px;
+  left: 80px;
+}
+
+
+.facebook_icon {
+  float: left;
+  position: absolute;
+  top: 170px;
+  left: 40px;
+  width: 30px;
+  height: 30px;
+}
+
+.fb_link {
+  position: absolute;
+  top: 175px;
+  left: 80px;
+  font-size: 20px;
+  color: wheat;
+}
+
+.fb_link:hover {
+  text-decoration: underline;
+}
+
+
+.whatsapp_icon {
+  float: left;
+  position: absolute;
+  top: 220px;
+  left: 40px;
+  width: 30px;
+  height: 30px;
+}
+
+.what_contacts {
+  position: absolute;
+  top: 210px;
+  left: 80px;
+}
+
+
+.email_icon {
+  float: left;
+  position: absolute;
+  top: 270px;
+  left: 40px;
+  width:30px;
+  height:30px;
+}
+
+.email_link {
+  position: absolute;
+  top: 275px;
+  left: 80px;
+  font-size: 20px;
+  color: wheat;
+}
+
+.email_link:hover {
+  text-decoration: underline;
+}
+
+.center_img {
+  position: absolute;
+  left: 40%;
+  bottom: 100px;
+  height: 170px;
+  width: 150px;
+}
+
+.center_caption {
+  position: absolute;
+  left: 53%;
+  bottom: 100px;
+  font-size: 30px;
+  width: 100px;
+}
+
+.sobil_icon {
+  position: absolute;
+  top: 290px;
+  left: 38%;
+  height: 40px;
+  width: 40px;
+}
+
+.sobil {
+  color: white;
+  position: absolute;
+  left: 42%;
+  bottom: 1px;
+  font-size: 18px;
+  font-family: Arial
+}
+
+.address_caption {
+  position: absolute;
+  bottom: 240px;
+  left: 85%;
+  color: white;
+}
+
+#underline1 {
+  position: absolute;
+  width: 300px;
+  float: right;
+  bottom: 235px;
+  right: 30px;
+}
+
+.address_content {
+  position: absolute;
+  bottom: 175px;
+  right: 2%;
+  width: 300px;
+  text-align: center;
+}
+
+.copyright {
+  position: absolute;
+  left: 70%;
+  bottom: 10px; ;
+}
+
+.bottom_next_button {
+  position: absolute; 
+  bottom: 100px;
+  right: 100px;
+  width: 100px; 
+  height: 50px; 
+  margin-left: 90%; 
+  margin-top: -10px; 
+  background-color:  azure;
+  color: navy;
+  text-align: center;
+  font-size: larger;
+  z-index: 2;
+  border: 2px solid  azure;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+@media only screen and (max-width: 1000px) {
+  .last_section {
+    top: 1000;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: 420px;
+    
+  }
+
+  .contacts_caption {
+    top: 30px;
+    left: 8%;
+    font-size: 12px;
+  }
+  
+  #underline {
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  
+  .phone_icon {
+    top: 90px;
+    left: 3%;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .contacts {
+    top: 80px;
+    left: 10%;
+    font-size: 11px;
+    width: 100px;
+  }
+  
+  
+  .facebook_icon {
+    top: 120px;
+    left: 3%;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .fb_link {
+    top: 125px;
+    left: 10%;
+    font-size: 12px;
+  }
+  
+
+  .whatsapp_icon {
+    top: 150px;
+    left: 3%;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .what_contacts {
+    top: 140px;
+    left: 10%;
+    font-size: 11px;
+    width: 100px;
+  }
+  
+  
+  .email_icon {
+    top: 180px;
+    left: 3%;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .email_link {
+    top: 180px;
+    left: 10%;
+    font-size: 12px;
+  }
+  
+  .email_link:hover {
+    text-decoration: underline;
+  }
+  
+  .center_img {
+    left: 30%;
+    bottom: 70px;
+    height: 90px;
+    width: 70px;
+  }
+  
+  .center_caption {
+    position: absolute;
+    left: 54%;
+    bottom: 55px;
+    font-size: 18px;
+    width: 100px;
+  }
+  
+  .sobil_icon {
+    position: absolute;
+    top: 370px;
+    left: 28%;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .sobil {
+    left: 38%;
+    bottom: 10px;
+    font-size: 11px;
+    font-family: Arial
+  }
+  
+  .address_caption {
+    bottom: 347px;
+    left: 75%;
+    color: white;
+    font-size: 12px;
+  }
+  
+  #underline1 {
+    width: 100px;
+    float: right;
+    bottom: 348px;
+    right: 20px;
+  }
+  
+  .address_content {
+    position: absolute;
+    bottom: 235px;
+    right: 8%;
+    width: 100px;
+    text-align: center;
+    font-size: smaller;
+  }
+  
+  .copyright {
+    position: absolute;
+    left: 15%;
+    bottom: -15px;
+    font-size: 10px;
+  }
+  
+  .bottom_next_button {
+    display: none;
+  }
+}
+</style>
+</head>
+<body style="background-color: rgb(218, 213, 213);">
+	
+  <header>
+    <div class="header_img">
+      <img src="tch.jpg" class="header_logo"></img>
+      <img src="nom.jpg" class="header_icon"></img>   
+    </div>
+
+    <div class="menu_bar">
+
+      <button for="menu_checkbox" class="collapse">
+        <hr class="collapse_line" id="line1">
+        <hr class="collapse_line" id="line2">
+        <hr class="collapse_line" id="line3">
+      </button>
+
+      <script>
+        document.querySelector('.collapse').addEventListener('click', function() {
+            this.classList.toggle('active');
+          });
+
+      </script>
+            
+      <div class="collapse_content">
+
+        <div class="dropdown">
+          <a href="index.html">
+              <button class="dropbtn" id="the_home">Home</button>
+          </a>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">About</button>
+            <div class="dropdown-content" style="position: absolute; left: -50px;">
+              <a href="about.html">History</a>
+              <a href="govboard.html">Governing Board</a>
+              <a href="Principal.html">Principal’s Message</a>
+              <a href="anthem.html">Anthem/Mission/Vision</a>
+              <a href="gallery.html">Gallery</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">School</button>
+            <div class="dropdown-content" style="position: absolute; left: -50px;">
+              <a href="curricullum.html">Academic Curricullum</a>
+              <a href="extra curricullum.html">Co-Curricullum</a>
+              <a href="#">School-Calender</a>
+              <a href="#">List Of Books</a>
+              <a href="religios.html">Religious</a>
+            </div>
+        </div>
+
+
+        <div class="dropdown">
+            <button class="dropbtn">Admission</button>
+            <div class="dropdown-content" id="admission" style="position: absolute; left: -40px;">
+              <a href="admission.html">Admission Process</a>
+              <a href="#">Fees/Payment</a>
+            </div>
+        </div>
+
+
+        <div class="dropdown">
+          <button class="dropbtn">Login Portal</button>
+          <div class="dropdown-content" id="portal" style="position: absolute; left: -40px;">
+            <a href="portal.html">Parent Portal</a>
+            <a href="portal.html">Teachers Portal</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </header>
+
+      <!-- Collapse Script -->
+      <script>
+        // Add event listener to the button
+        const collapseButton = document.querySelector('.collapse');
+        const content = document.querySelector('.collapse_content');
+
+        collapseButton.addEventListener('click', () => {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+
+        var coll = document.getElementsByClassName("dropbtn");
+        var i;
+
+        for (i = 0; i < coll.length; i++)
+        {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+
+            if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+            }
+
+            else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+
+          });
+        }
+      </script>
+
+<a href="govboard.html"><button id="prev">Previous</button></a> 
+<a href="anthem.html"><button id="next">Next</button></a>
+
+<h1 class="message">Message From the Principal</h1>
+<img src="principal1.jpg" class="principal_img">
+
+<blockquote>
+  <p class="q1">Crescent Heights is a school of excellnce hrejsibf  fghjesdakfaew hefjkwelhf heuf erhguerjs erhgjgselhg hirgejrkgn hgrjegher gjkrgjeg jgerigreg rejgerkg rjegi ergjrekgjre jgerkgmerkg rerjgrekgjer kgjerg mg jrekgjreg ek gjegerkg rgkergo erkgjeerkg jregkre jj gjrek gre  jkrg ergjrenmgk ghgjrgd g jrk reltrk jr hr hrfhrjklrheuit hergherg ohreugrtg uthtgurhgi hguihreigj hruhregui ghrgkuhre gurghrjghrt grjghjrgj rghrtughr gurtghrguk hrogil ghrtgbutrgj thgtrjughrtgjke hiurelhutehhe uhfujfe uchrcj ekwhfe hefjweh jdkf ehefjebf gfehefe fefhe gefherf hefjew hefhje rfgfhjewfhwej hefjewkfner herjgnre ghefguner uhrejkwlrhgerj whjregrhe jgregherjgerhr e hughrejg hg uh geui rgr hreuh greerer u hreg  hreuih hrge hgreuither g  erighergskjhdfhwe c hefjwehbf wfgewhfwebi ewgewrghewf gefrhjfbweq herjefhbqwejke3 l ewrhewurh34ejk fewugfewfhbewr fwerhewjf werw3jekf ewjhfwefbewfkjw egufeuitehrfuewjfwem, fwehrgbewjhgw ejfkwe fgwneyufgewbjkf ewufjhjkdfhew jhewkferjhgf ewjhf egyuehfbejhrgbejf ghe fhejrkf ewfhewjferhf er bygfe jkverhfew herguieghe wjrfhewjfeghfew grehurhgewj gewfheufehw ejhfeoihjerfgekwguiskjfb egerhjgberhgfger jerhegfu grheuhgef erjgfherg jerbgjergh ergjergjehgj eshseugerjkner guh jrhgerguherg dsjhafywe gwefuh defguihgf ygefudb fgyeuvf gryufdeh tfgyewufg gfewuefjb  hgehu jkdskfhre hergu gkgjker hrgejg gherjglrw uerugeedgru grughghg rgr</p>
+  <p class="q2">re g hegjfklesrg erghjer kslghje rngkr gjerli gjen gherjkg jgkrelgnmerkglregn edjhfhed gbehrhjfefhe jfkef fiiefgj ehfjewgk hjgi egjkergje gekjgfkegfjekg f jgeigje hfejkg hgfej ghejf h khj hfewkgf fhj ifjwo efwfewfkhog  heiugfn ghgierghnerjk g  yugugufiejkg fnk ewg jgrefjkewuger u uwihe wejewf hjewf u 4ti 4 u 4y guj e e  erug ehrj ebrsfguhsejuselkhj,de hjgerkhsejgheskfb enfsjghfbndsvyugvehbngfm sejhkfkbeghj emsdvjhjf ge fjbnefshjfuj ensdnhkvjsd dvbkjsehdb xdnbdvhxbf jvbmvhj nvbheksfb jsdkvhefu erg hkuiefergf hjrugre jk uegrjgjer hrujengfjergf jhfwe gehfewljkgfher ghjerkglnsgj hjlf ghefguner uhrejkwlrhgerj whjregrhe jgregherjgerhr e hughrejg hg uh geui rgr hreuh greerer u hreg  hreuih hrge hgreuither g  erighergskjhdfhwe c hefjwehbf wfgewhfwebi ewgewrghewf gefrhjfbweq herjefhbqwejke3 l ewrhewurh34ejk fewugfewfhbewr fwerhewjf werw3jekf ewjhfwefbewfkjw egufeuitehrfuewjfwem, fwehrgbewjhgw ejfkwe fgwneyufgewbjkf ewufjhjkdfhew jhewkferjhgf ewjhf egyuehfbejhrgbejf ghe fhejrkf ewfhewjferhf er bygfe jkverhfew herguieghe wjrfhewjfeghfew grehurhgewj gewfheufehw ejhfeoihjerfgekwguiskjfb egerhjgberhgfger jerhegfu grheuhgef erjgfherg jerbgjergh ergjergjehgj eshseugerjkner guh jrhgerguherg dsjhafywe gwefuh defguihgf ygefudb fgyeuvf gryufdeh tfgyewufg gfewuefjb  hgehu jkdskfhre hergu gkgjker hrgejg gherjglrw uerugeedgru grughghg rgr</p>
+  <p class="q3">re g hegjfklesrg erghjer kslghje rngkr gjerli gjen gherjkg jgkrelgnmerkglregn edjhfhed gbehrhjfefhe jfkef fiiefgj ehfjewgk hjgi egjkergje gekjgfkegfjekg f jgeigje hfejkg hgfej ghejf h khj hfewkgf fhj ifjwo efwfewfkhog  heiugfn ghgierghnerjk g  yugugufiejkg fnk ewg jgrefjkewuger u uwihe wejewf hjewf u 4ti 4 u 4y guj e e  erug ehrj ebrsfguhsejuselkhj,de hjgerkhsejgheskfb enfsjghfbndsvyugvehbngfm sejhkfkbeghj emsdvjhjf ge fjbnefshjfuj ensdnhkvjsd dvbkjsehdb xdnbdvhxbf jvbmvhj nvbheksfb jsdkvhefu erg hkuiefergf hjrugre jk uegrjgjer hrujengfjergf jhfwe gehfewljkgfher ghjerkglnsgj hjlf ghefguner uhrejkwlrhgerj whjregrhe jgregherjgerhr e hughrejg hg uh geui rgr hreuh greerer u hreg  hreuih hrge hgreuither g  erighergskjhdfhwe c hefjwehbf wfgewhfwebi ewgewrghewf gefrhjfbweq herjefhbqwejke3 l ewrhewurh34ejk fewugfewfhbewr fwerhewjf werw3jekf ewjhfwefbewfkjw egufeuitehrfuewjfwem, fwehrgbewjhgw ejfkwe fgwneyufgewbjkf ewufjhjkdfhew jhewkferjhgf ewjhf egyuehfbejhrgbejf ghe fhejrkf ewfhewjferhf er bygfe jkverhfew herguieghe wjrfhewjfeghfew grehurhgewj gewfheufehw ejhfeoihjerfgekwguiskjfb egerhjgberhgfger jerhegfu grheuhgef erjgfherg jerbgjergh ergjergjehgj eshseugerjkner guh jrhgerguherg dsjhafywe gwefuh defguihgf ygefudb fgyeuvf gryufdeh tfgyewufg gfewuefjb  hgehu jkdskfhre hergu gkgjker hrgejg gherjglrw uerugeedgru grughghg rgr</p>
+  <p class="q4">re g hegjfklesrg erghjer kslghje rngkr gjerli gjen gherjkg jgkrelgnmerkglregn edjhfhed gbehrhjfefhe jfkef fiiefgj ehfjewgk hjgi egjkergje gekjgfkegfjekg f jgeigje hfejkg hgfej ghejf h khj hfewkgf fhj ifjwo efwfewfkhog  heiugfn ghgierghnerjk g  yugugufiejkg fnk ewg jgrefjkewuger u uwihe wejewf hjewf u 4ti 4 u 4y guj e e  erug ehrj ebrsfguhsejuselkhj,de hjgerkhsejgheskfb enfsjghfbndsvyugvehbngfm sejhkfkbeghj emsdvjhjf ge fjbnefshjfuj ensdnhkvjsd dvbkjsehdb xdnbdvhxbf jvbmvhj nvbheksfb jsdkvhefu erg hkuiefergf hjrugre jk uegrjgjer hrujengfjergf jhfwe gehfewljkgfher ghjerkglnsgj hjlf ghefguner uhrejkwlrhgerj whjregrhe jgregherjgerhr e hughrejg hg uh geui rgr hreuh greerer u hreg  hreuih hrge hgreuither g  erighergskjhdfhwe c hefjwehbf wfgewhfwebi ewgewrghewf gefrhjfbweq herjefhbqwejke3 l ewrhewurh34ejk fewugfewfhbewr fwerhewjf werw3jekf ewjhfwefbewfkjw egufeuitehrfuewjfwem, fwehrgbewjhgw ejfkwe fgwneyufgewbjkf ewufjhjkdfhew jhewkferjhgf ewjhf egyuehfbejhrgbejf ghe fhejrkf ewfhewjferhf er bygfe jkverhfew herguieghe wjrfhewjfeghfew grehurhgewj gewfheufehw ejhfeoihjerfgekwguiskjfb egerhjgberhgfger jerhegfu grheuhgef erjgfherg jerbgjergh ergjergjehgj eshseugerjkner guh jrhgerguherg dsjhafywe gwefuh defguihgf ygefudb fgyeuvf gryufdeh tfgyewufg gfewuefjb  hgehu jkdskfhre hergu gkgjker hrgejg gherjglrw uerugeedgru grughghg rgr</p>
+</blockquote>
+
+
+<section class="last_section">
+  <h3 class="contacts_caption">Our Contacts</h3>
+  <hr id="underline">
+  <img src="phone.webp" class="phone_icon">
+  <h3 class="contacts">+23467272829, +23495982443</h3>
+
+  <img src="fb.png" class="facebook_icon">
+  <a href="#" class="fb_link">crescentheightsoyo@facebook</a>
+
+  <img src="whatsapp image.png" class="whatsapp_icon">
+  <h3 class="what_contacts">+23467272829, +23495982443</h3>
+
+  <img src="e mail.png" class="email_icon">
+  <a href="#" class="email_link">crescentheight@gmail.com</a>
+  
+  <img src="tch.jpg" class="center_img">
+  <h2 class="center_caption">Crescent heights, Oyo.</h2>
+  <img src="MPL.png" alt="sobil_icon" class="sobil_icon">
+  <h5 class="sobil">DEVELOPED BY SOBIL</h5>
+  </div>
+
+  <h3 class="address_caption">Address</h3>
+  <hr id="underline1">
+  <address class="address_content">
+    Crescent Heights New site,
+    Opposite Cheif Imam House,Odo-Aarin,Ilora,Oyo,Oyo State,
+    Nigeria.
+  </address>
+
+  <h5 class="copyright">Copyright,2023.All right reserved by Crescent Heights</h5>
+
+  <a href="index.html">
+    <button class="bottom_next_button">
+      GO UP
+    </button>
+  </a>
+</section>
+</body>
