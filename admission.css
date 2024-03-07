@@ -1,3 +1,6 @@
+body {
+    overflow: scroll;
+}
 .adm_img {
     position: relative;
     left: auto;
