@@ -3,7 +3,7 @@ body {
     margin: auto;
     padding: auto;
     max-width: 100%;
-/*     overflow-y: hidden; */
+    overflow-x: hidden;
 
 }
 
@@ -2103,4 +2103,3 @@ padding: 2px 5px;
     display: none;
   }
 }
-
