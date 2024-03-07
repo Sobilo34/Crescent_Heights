@@ -1,0 +1,299 @@
+body {
+    height: 500px;
+    max-height: 500px;
+}
+.anthem_img {
+    position: relative;
+    left: auto;
+    top: 120px;
+    height: 300px;
+    width: 100%; 
+    overflow: hidden;
+}
+
+.anthem_caption {
+    position: relative;
+    top: -300px;
+    left: 20%;
+    text-align: flex;
+    font-size: 30px;
+    color: black;
+    overflow: hidden;
+}
+
+.underlineA{
+    position: relative;
+    top: -320px;
+    left: 16%;
+    background-color: blue;
+    height: 5px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.anthem_text {
+    position: relative;
+    left: 15%;
+    top: -300px;
+    width: 500px;
+    height: 650px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+
+/*Video*/
+* {
+    box-sizing: border-box;
+}
+video {
+    position: absolute;
+    top: 700px;
+    left: 50%;
+    width: 40%;
+    height: 350px;
+    overflow: hidden;
+}
+
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+
+	
+}
+@media only screen and (min-width: 600px) {
+    .col-s-12 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+.play_video {
+    position: absolute;
+    top: 1050px;
+    left: 55%; 
+    font-size: 40px;
+    color: darkorange;
+    overflow: hidden;
+}
+
+.our_vision {
+    position: relative;
+    top: -250px;
+    left: -300px;
+    overflow: hidden;
+}
+
+.underline{
+    position: relative;
+    top: -290px;
+    left: 19%;
+    background-color: blue;
+    height: 5px;
+    width: 250px;
+    margin: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.vision_text {
+    position: relative;
+    top: -295px;
+    left: 21%;
+    height: 100px;
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.mission {
+    position: relative;
+    top: -580px;
+    left: 60%;
+    text-align: flex;
+    margin: 100px; 
+    overflow: hidden;
+}
+
+.underline2{
+    position: relative;
+    top: -670px;
+    left: 60%;
+    background-color: blue;
+    height: 5px;
+    width: 300px;
+    margin: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mission_text {
+    position: relative;
+    top: -680px;
+    height: 100px;
+    left: 52%;
+    margin-left: 100px;
+    width: 400px;
+    text-align: center;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .anthem_caption {
+        position: relative;
+        top: -380px;
+        left: 5%;
+        text-align: flex;
+        font-size: 20px;
+        color: black;
+        overflow: hidden;
+    }
+    
+    .underlineA{
+        position: relative;
+        top: -395px;
+        left: 5%;
+        background-color: blue;
+        height: 3px;
+        width: 150px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .anthem_text {
+        position: relative;
+        left: 5%;
+        top: -390px;
+        width: 500px;
+        height: 650px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: smaller;
+        overflow: hidden;
+    }
+    
+    /*Video*/
+    * {
+        box-sizing: border-box;
+    }
+    video {
+        position: absolute;
+        top: 1200px;
+        left: 10%;
+        width: 80%;
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .play_video {
+        position: absolute;
+        top: 1140px;
+        left: 20%;
+        text-align: center;
+        font-size: 25px;
+        color: darkorange;
+    }
+    
+    .our_vision {
+        position: absolute;
+        top: auto;
+        margin-top: -100px;
+        left: 15%;
+        font-size: 20px;
+    }
+    
+    .underline{
+        top: -120px;
+        left: auto;
+        height: 3px;
+        width: 120px;
+    }
+    
+    .vision_text {
+        top: -150px;
+        left: 15%;
+        height: 100px;
+        width: 250px;
+        text-align: start;
+        font-size: 16px;
+    }
+    
+    .mission {
+        top: -250px;
+        left: -50px;
+        font-size: 20px;
+        width: 200px;
+    }
+    
+    .underline2{
+        position: relative;
+        top: -340px;
+        left: 0%;
+        height: 3px;
+        width: 180px;
+    }
+    
+    .mission_text {
+        position: relative;
+        top: -370px;
+        height: 100px;
+        left: -50px;
+        margin-left: 100px;
+        width: 250px;
+        text-align: start;
+        font-size: 16px;
+    }
+}
+
+   .last_section {
+    position: relative;
+    display: block;
+    top: -600px;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: 350px;
+    background-color: rgb(0, 0, 22);
+    color: wheat;
+    overflow: hidden;
+      
+    }
+    
+    @media only screen and (max-width: 1000px) {
+      .last_section {
+        top: -300px;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        height: 420px;
+        
+      }
+    }
