@@ -111,7 +111,7 @@ body {
 /* The Header Region Styling */
 header {
   position: absolute;
-  top: 1px;
+  top: -1px;
   background:  rgb(0, 0, 22);
 	height: 120px;
   width: 100%;
@@ -121,7 +121,7 @@ header {
 header .menu_bar {
 position: relative;
 left: 0px;
-top: -100px;
+top: -60px;
 display: flex;
 overflow: start;
 flex-direction: row-reverse;
