@@ -121,7 +121,7 @@ header {
 header .menu_bar {
 position: relative;
 left: 0px;
-top: -60px;
+top: -100px;
 display: flex;
 overflow: start;
 flex-direction: row-reverse;
