@@ -119,13 +119,13 @@ header {
 }
 
 header .menu_bar {
-  position: relative;
-  left: 0px;
-  top: -60px;
-	display: flex;
-	overflow: start;
-	flex-direction: row-reverse;
-  max-width: 100%;
+position: relative;
+left: 0px;
+top: -70px;
+display: flex;
+overflow: start;
+flex-direction: row-reverse;
+max-width: 100%;
 }
 
 .header_img {
