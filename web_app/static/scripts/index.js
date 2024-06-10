@@ -2,41 +2,71 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;
   const testimonials = document.querySelectorAll('.testimonial-item');
   const slider = document.querySelector('.testimonial-slider');
+  const nextButton = document.querySelector('.testimonial-nav-button.next');
+  const prevButton = document.querySelector('.testimonial-nav-button.prev');
+  let interval;
 
   function showSlide(index) {
-    testimonials.forEach((testimonial, i) => {
-      testimonial.classList.remove('active');
-      if (i === index) {
-        testimonial.classList.add('active');
-      }
-    });
+    const maxIndex = testimonials.length - 1;
+    if (index < 0) {
+      currentIndex = maxIndex;
+    } else if (index > maxIndex) {
+      currentIndex = 0;
+    } else {
+      currentIndex = index;
+    }
 
-    const offset = -index * (testimonials[0].offsetWidth + parseFloat(getComputedStyle(slider).gap)); // Adjust gap calculation
-    slider.style.transform = `translateX(${offset}px)`;
+    const offset = -currentIndex * (testimonials[0].offsetWidth + 20); // 20 is the gap
+    testimonials.forEach((testimonial, i) => {
+      testimonial.style.transform = `translateX(${offset + (i * (testimonials[0].offsetWidth + 20))}px)`;
+    });
   }
 
   function nextSlide() {
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showSlide(currentIndex);
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
   }
 
   // Automatic sliding
-  setInterval(nextSlide, 3000); // Change slide every 3 seconds
+  function startAutoSlide() {
+    interval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+  }
 
-  // Initialize the first slide
-  showSlide(currentIndex);
+  function stopAutoSlide() {
+    clearInterval(interval);
+  }
+
+  // Event listeners for buttons
+  nextButton.addEventListener('click', () => {
+    nextSlide();
+    stopAutoSlide(); // Stop auto sliding when manually navigating
+    startAutoSlide(); // Restart auto sliding after navigation
+  });
+
+  prevButton.addEventListener('click', () => {
+    prevSlide();
+    stopAutoSlide(); // Stop auto sliding when manually navigating
+    startAutoSlide(); // Restart auto sliding after navigation
+  });
 
   // Hover effect
   testimonials.forEach(testimonial => {
-    testimonial.addEventListener('mouseover', () => {
-      testimonial.classList.add('hovered');
-    });
-    testimonial.addEventListener('mouseout', () => {
-      testimonial.classList.remove('hovered');
-      showSlide(currentIndex); // Return to the current slide when mouse leaves
-    });
+    testimonial.addEventListener('mouseover', stopAutoSlide); // Pause automatic sliding on hover
+    testimonial.addEventListener('mouseout', startAutoSlide); // Resume automatic sliding on mouse out
   });
+
+  // Initialize the first slide
+  showSlide(currentIndex);
+  startAutoSlide(); // Start automatic sliding
 });
+
+
+
+
+
 
 
 
