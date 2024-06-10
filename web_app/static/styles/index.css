@@ -1171,6 +1171,12 @@ padding: 2px 5px;
 @media only screen and (max-width: 768px) {
   .column {
     flex: 0 0 48%;
+    margin-bottom: 1.5rem; /* Adjusted margin for smaller screens */
+  }
+
+  .card img {
+    height: 150px; /* Allow image height to adjust */
+    width: 100%;
   }
 }
 
@@ -1189,7 +1195,7 @@ padding: 2px 5px;
 
 
 .sectionTestimonials {
-  padding: 50px 0;
+  padding: 20px 0;
   background-color: #f9f9f9;
   position: relative;
 }
@@ -1210,19 +1216,22 @@ padding: 2px 5px;
 }
 
 .testimonial-slider {
-  display: flex;
+  margin: 20px;
+  justify-content: space-evenly;
+  display: inline-flex;
   overflow: hidden; /* Hide overflow */
-  gap: 10px;
-  padding: 20px;
+  gap: 10px; /* Reduce the gap between items to 10px */
+  padding: 10px;
   position: relative;
+  max-width: fit-content;
 }
 
 .testimonial-item {
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 100%;
   min-width: 300px;
   transition: transform 0.5s ease;
 }
@@ -1306,110 +1315,295 @@ padding: 2px 5px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* The Third Section */
-
-.sectionD {
-	background-color: azure;
-	position: relative;
-	top: -45px;
-  left: auto;
-	height: 750px;
-	width: 100%;
-  z-index: 2;
-  overflow: hidden;
-}
-
-.main_caption {
+.sectionNews {
+  padding: 50px 0;
+  background-color: #f9f9f9;
   position: relative;
-  top: 50px;
-  left: 70px;
-  width: 400px;
-  color: grey;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
-  text-shadow: 2px 2px black;
-  z-index: 8;
 }
 
-.ex-contents {
-  align-content: flex-start;
+.sectionNews .text-center {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sectionNews .text-center h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.sectionNews .text-center p {
+  font-size: 18px;
+  color: #666;
+}
+
+.news-slider {
   display: flex;
-  flex-wrap: wrap;
-  width: 450px;
-  margin: 30px;
-  margin-top: 140px;
-  padding: 2px;
-  justify-content: space-evenly;
-  
-}
-
-.tah, .comm, .mwl, .jum {
-  height: 150px;
-  width: 200px;
-}
-
-.tah:hover, .comm:hover, .mwl:hover, .jum:hover {
-  text-decoration: underline;
-  text-decoration-color: azure;
-}
-.tah {
-  background-color: rgb(3, 156, 3);
-}
-
-.comm {
-  background-color: rgb(236, 31, 31);
-}
-
-.mwl {
-  background-color: coral;
-}
-
-.jum {
-  background-color: rgb(80, 80, 231);
-}
-
-.tah h4, .comm h4, .mwl h4, .jum h4 {
+  overflow: hidden;
+  gap: 20px;
+  padding: 20px;
   position: relative;
-  top: 60px;
+}
+
+.news-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  min-width: 300px;
+  transition: transform 0.5s ease;
+  flex: 0 0 auto;
+}
+
+.news-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.news-content {
+  text-align: left;
+}
+
+.news-title {
   font-size: 20px;
-  font-weight: bold;
-  color: white;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.news-date {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.news-text {
+  font-size: 16px;
+  color: #555;
+}
+
+.news-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.news-nav-button:hover {
+  background-color: #555;
+}
+
+.news-nav-button:focus {
+  outline: none;
+}
+
+.news-nav-button.prev {
+  left: 10px;
+}
+
+.news-nav-button.next {
+  right: 10px;
+}
+
+@media (max-width: 600px) {
+  .news-slider {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .news-item {
+    min-width: 250px;
+    padding: 15px;
+  }
+
+  .news-title {
+    font-size: 18px;
+  }
+
+  .news-date {
+    font-size: 12px;
+  }
+
+  .news-text {
+    font-size: 14px;
+  }
+}
+
+
+.sectionVirtualTour {
+  padding: 50px 0;
+  background-color: #f2f2f2;
   text-align: center;
 }
 
-.video_caption {
+.sectionVirtualTour .text-center {
+  margin-bottom: 30px;
+}
+
+.sectionVirtualTour .text-center h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.sectionVirtualTour .text-center p {
+  font-size: 18px;
+  color: #666;
+}
+
+.virtual-tour-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.virtual-tour-button:hover {
+  background-color: #555;
+}
+
+.tour-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.tour-img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tour-img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .tour-images {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tour-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.sectionSchoolAdmins {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+.sectionSchoolAdmins .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.sectionSchoolAdmins .text-center {
+  margin-bottom: 30px;
+}
+
+.sectionSchoolAdmins .text-center h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.sectionSchoolAdmins .text-center p {
+  font-size: 18px;
+  color: #666;
+}
+
+.admin-resources {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resource {
+  width: calc(33.33% - 20px); /* Adjust for margin */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.resource:hover {
+  transform: translateY(-5px);
+}
+
+.resource h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.resource p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.resource a {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.resource a:hover {
+  background-color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .video_caption {
   position: relative;
   bottom: 400px;
   left: 60%;
   color: orangered;
   font-family: cursive;
-}
+} */
 
 /*Video*/
-* {
+/* * {
   box-sizing: border-box;
 }
 .ex_video video {
@@ -1470,7 +1664,7 @@ padding: 2px 5px;
   .main_caption {
     top: 50px;
     left: 15%;
-    font-size: 20px;
+    font-size: 20px; 
     text-shadow: 1px 1px black;
   }
   .ex-contents {
@@ -1501,13 +1695,13 @@ padding: 2px 5px;
     height: 200px;
   }
 }
-
+*/
 
 
 
 /* Forth Section */
 
-.sectionF {
+/* .sectionF {
 	background-color: gray;
 	position: relative;
 	bottom: 80px;
@@ -1552,21 +1746,21 @@ padding: 2px 5px;
 
 .des_entity h4 {
   text-align: center;
-}
+} */
 
 
 /* Fifth Section */
 
-#sectionG {
+/* #sectionG {
   background-color:  whitesmoke;
 	position: relative;
 	bottom: 90px;
   left: auto;
 	height: 550px;
-	width: 100%;
+	width: 100%; */
   /* overflow-y: scroll; */
-}
 
+/* 
 .news_icon {
   position: absolute;
   top: 7px;
@@ -1934,17 +2128,17 @@ padding: 2px 5px;
   font-size: 35px;
   color: rgb(2, 2, 63);
   text-shadow: 5px 5px 5px grey;
-}
+} */
 
 .school_map {
 	position: relative;
 	left: auto;
-  top: 70px;
+  top: 20px;
 	background-color: whitesmoke;
 	height: 350px;
 	width: 100%;
 	overflow: hidden; 
-	border-radius: 90px;
+	border-radius: 100px;
 	font-size: 20px;
 }
 
@@ -1965,337 +2159,99 @@ padding: 2px 5px;
     height: 250px;
     width: 100%;
     overflow: hidden; 
-    border-radius: 100px;
   }
 }
 
-.sectionK {
-	position: relative;
-  display: block;
-  top: auto;
-	bottom: auto;
-  left: auto;
-	width: 100%;
-  height: 350px;
+.footer {
+  margin-top: 50px;
   background-color: rgb(0, 0, 22);
-  color: wheat;
-  overflow: hidden;
-  
+  color: #fff;
+  padding: 50px 0;
 }
 
- .contacts_caption {
-  position: relative;
-  top: 30px;
-  left: 10%;
-  color: white;
+.footer .container {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-#underline {
-  width: 300px;
-  float: left;
-  margin-left: 50px;
-  margin-top: 15px;
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
-.phone_icon {
-  float: left;
-  position: absolute;
-  top: 120px;
-  left: 40px;
-  width:30px;
-  height:30px;
+.footer-column {
+  flex: 0 0 30%;
 }
 
-.contacts {
-  position: absolute;
-  top: 105px;
-  left: 80px;
-}
-
-
-.facebook_icon {
-  float: left;
-  position: absolute;
-  top: 170px;
-  left: 40px;
-  width: 30px;
-  height: 30px;
-}
-
-.fb_link {
-  position: absolute;
-  top: 175px;
-  left: 80px;
+.footer-column h3 {
   font-size: 20px;
-  color: wheat;
+  margin-bottom: 20px;
 }
 
-.fb_link:hover {
-  text-decoration: underline;
+.footer-column p {
+  margin-bottom: 10px;
 }
 
-
-.whatsapp_icon {
-  float: left;
-  position: absolute;
-  top: 220px;
-  left: 40px;
-  width: 30px;
-  height: 30px;
+.footer-column ul {
+  list-style: none;
+  padding: 0;
 }
 
-.what_contacts {
-  position: absolute;
-  top: 210px;
-  left: 80px;
+.footer-column ul li {
+  margin-bottom: 5px;
 }
 
-
-.email_icon {
-  float: left;
-  position: absolute;
-  top: 270px;
-  left: 40px;
-  width:30px;
-  height:30px;
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
 }
 
-.email_link {
-  position: absolute;
-  top: 275px;
-  left: 80px;
+.social-icons li {
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons a {
+  color: #fff;
   font-size: 20px;
-  color: wheat;
+  text-decoration: none;
 }
 
-.email_link:hover {
-  text-decoration: underline;
+.social-icons a:hover {
+  color: #ccc;
 }
 
-.center_img {
-  position: absolute;
-  left: 40%;
-  bottom: 100px;
-  height: 170px;
-  width: 150px;
-}
-
-.center_caption {
-  position: absolute;
-  left: 53%;
-  bottom: 100px;
-  font-size: 30px;
-  width: 100px;
-}
-
-.sobil_icon {
-  position: absolute;
-  top: 290px;
-  left: 38%;
-  height: 40px;
-  width: 40px;
-}
-
-.sobil {
-  color: white;
-  position: absolute;
-  left: 42%;
-  bottom: 1px;
-  font-size: 18px;
-  font-family: Arial
-}
-
-.address_caption {
-  position: absolute;
-  bottom: 240px;
-  left: 85%;
-  color: white;
-}
-
-#underline1 {
-  position: absolute;
-  width: 300px;
-  float: right;
-  bottom: 235px;
-  right: 30px;
-}
-
-.address_content {
-  position: absolute;
-  bottom: 175px;
-  right: 2%;
-  width: 300px;
+.footer-bottom {
   text-align: center;
 }
 
-.copyright {
-  position: absolute;
-  left: 70%;
-  bottom: 10px; ;
-}
+/* For small screens */
+@media (max-width: 767px) {
 
-.bottom_next_button {
-  position: absolute; 
-  bottom: 100px;
-  right: 100px;
-  width: 100px; 
-  height: 50px; 
-  margin-left: 90%; 
-  margin-top: -10px; 
-  background-color:  azure;
-  color: navy;
-  text-align: center;
-  font-size: larger;
-  z-index: 2;
-  border: 2px solid  azure;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-@media only screen and (max-width: 1000px) {
-  .sectionK {
-    top: auto;
-    bottom: auto;
-    left: auto;
-    width: 100%;
-    height: 420px;
-    
+  .footer{
+    margin-top: 100px;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .contacts_caption {
-    top: 30px;
-    left: 8%;
-    font-size: 12px;
-  }
-  
-  #underline {
-    width: 100px;
-    margin-left: 10px;
-    margin-top: 20px;
-  }
-  
-  .phone_icon {
-    top: 90px;
-    left: 3%;
-    width: 20px;
-    height: 20px;
-  }
-  
-  .contacts {
-    top: 80px;
-    left: 10%;
-    font-size: 11px;
-    width: 100px;
-  }
-  
-  
-  .facebook_icon {
-    top: 120px;
-    left: 3%;
-    width: 20px;
-    height: 20px;
-  }
-  
-  .fb_link {
-    top: 125px;
-    left: 10%;
-    font-size: 12px;
-  }
-  
-
-  .whatsapp_icon {
-    top: 150px;
-    left: 3%;
-    width: 20px;
-    height: 20px;
-  }
-  
-  .what_contacts {
-    top: 140px;
-    left: 10%;
-    font-size: 11px;
-    width: 100px;
-  }
-  
-  
-  .email_icon {
-    top: 180px;
-    left: 3%;
-    width: 20px;
-    height: 20px;
-  }
-  
-  .email_link {
-    top: 180px;
-    left: 10%;
-    font-size: 12px;
-  }
-  
-  .email_link:hover {
-    text-decoration: underline;
-  }
-  
-  .center_img {
-    left: 30%;
-    bottom: 70px;
-    height: 90px;
-    width: 70px;
-  }
-  
-  .center_caption {
-    position: absolute;
-    left: 54%;
-    bottom: 55px;
-    font-size: 18px;
-    width: 100px;
-  }
-  
-  .sobil_icon {
-    position: absolute;
-    top: 370px;
-    left: 28%;
-    height: 30px;
-    width: 30px;
-  }
-  
-  .sobil {
-    left: 38%;
-    bottom: 10px;
-    font-size: 11px;
-    font-family: Arial
-  }
-  
-  .address_caption {
-    bottom: 347px;
-    left: 75%;
-    color: white;
-    font-size: 12px;
-  }
-  
-  #underline1 {
-    width: 100px;
-    float: right;
-    bottom: 348px;
-    right: 20px;
-  }
-  
-  .address_content {
-    position: absolute;
-    bottom: 235px;
-    right: 8%;
-    width: 100px;
+  .footer-column {
+    flex: 0 0 100%;
     text-align: center;
-    font-size: smaller;
+    margin-bottom: 30px;
   }
-  
-  .copyright {
-    position: absolute;
-    left: 15%;
-    bottom: -15px;
-    font-size: 10px;
+
+  .footer-column:last-child {
+    margin-bottom: 0;
   }
-  
-  .bottom_next_button {
-    display: none;
+
+  .social-icons {
+    justify-content: center;
   }
 }
