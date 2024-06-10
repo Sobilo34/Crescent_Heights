@@ -5,13 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Website</title>
-   <link rel="stylesheet" href="../static/styles/index.css">
-   <link rel="icon" href="../static/images/tch.jpg" type="image/x-icon">
-  <nav id="lop"></nav>
+  <link rel="icon" href="../static/images/tch.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../static/styles/index.css">
 </head>
-<script src ="index.js"></script>
+<script src ="../static/scripts/index.js"></script>
 <body>
-
+  <nav id="lop"></nav>
   <header>
     <div class="header_img">
       <img src="../static/images/tch.jpg" class="header_logo"></img>
@@ -176,13 +175,7 @@
     </script>
   </div>
 
-
-  <a href="about.html">
-  <button class="home_next_page_button">
-    Next
-  </button>
-  </a>
-
+  
 <!-- The First Section -->
 <div class="sectionA">
     <div class="value_container">
@@ -217,11 +210,9 @@
         <h1 class="description_header"><b>One School, Two Pathways</b></h1>
         <h3 class="description_content">Crescent Heights is a Two segmented secondary school with both Junior and Senior section respectively.To know how it journey begins,
           <span style="color: red; font-size: 15px;">
-          <br><br>
-          Click on each section for more details</span>
-          <span>
-            <img src="../static/images/arrow_left.png" class="pointing_arrow" alt="pointint_arrow">
-            <img src="../static/images/arrow_down.png" class="down_arrow" alt="pointint_arrow">
+          <br><br><br><br>Click on the button below to learn more</span>
+            <!-- <img src="../static/images/arrow_left.png" class="pointing_arrow" alt="pointint_arrow">
+            <img src="../static/images/arrow_down.png" class="down_arrow" alt="pointint_arrow"> -->
             <button id="jnr"><b>Junior Section</b></button>
             <button id="snr"><b>Senior Section</b></button>
           </span>
@@ -388,8 +379,142 @@
   </div>
 </section>
 
+<!-- New Section: Extra-Curricular Activities -->
+<section class="sectionC">
+  <div class="container">
+    <h2 class="text-center">Extra-Curricular Activities</h2>
+    <p class="text-center">Explore the various activities available to our students to enhance their skills and interests.</p>
+    <div class="row">
+      <div class="column">
+        <a href="activity1.html">
+          <div class="card">
+            <img src="../static/images/lab.jfif" alt="Activity 1">
+            <div class="card-body">
+              <h5 class="card-title">Sports</h5>
+              <p class="card-text">Engage in various sports to promote physical fitness and teamwork.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a href="activity2.html">
+          <div class="card">
+            <img src="../static/images/White-coats.webp" alt="Activity 2">
+            <div class="card-body">
+              <h5 class="card-title">Arts & Crafts</h5>
+              <p class="card-text">Unleash creativity through diverse arts and crafts activities.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a href="activity3.html">
+          <div class="card">
+            <img src="../static/images/disa.jpg" alt="Activity 3">
+            <div class="card-body">
+              <h5 class="card-title">Music & Drama</h5>
+              <p class="card-text">Participate in music and drama to develop performance skills.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a href="activity4.html">
+          <div class="card">
+            <img src="../static/images/campala.jpg" alt="Activity 4">
+            <div class="card-body">
+              <h5 class="card-title">Science Club</h5>
+              <p class="card-text">Join the science club to explore and experiment with scientific ideas.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section class="sectionD">
+
+<section class="sectionTestimonials">
+  <div class="text-center">
+    <h2>What Our Students Say</h2>
+    <p>Hear from our satisfied students</p>
+  </div>
+  <div class="testimonial-slider">
+    <div class="testimonial-item">
+      <img src="../static/images/schoolboy.jpg" alt="Student 1" class="testimonial-img">
+      <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac vestibulum erat.</p>
+      <p class="testimonial-name">John Doe</p>
+      <p class="testimonial-role">Alumni</p>
+    </div>
+    <div class="testimonial-item">
+      <img src="../static/images/schoolboy.jpg" alt="Student 2" class="testimonial-img">
+      <p class="testimonial-text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p class="testimonial-name">Jane Smith</p>
+      <p class="testimonial-role">Current Student</p>
+    </div>
+    <div class="testimonial-item">
+      <img src="../static/images/schoolboy.jpg" alt="Student 3" class="testimonial-img">
+      <p class="testimonial-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="testimonial-name">Emily Johnson</p>
+      <p class="testimonial-role">Graduate</p>
+    </div>
+    <!-- Add more testimonials as needed -->
+  </div>
+</section>
+
+<!-- Existing sections... -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section class="sectionD">
   <h1 class="main_caption">Extra-Curricular Activities</h1>
 
   <div class="ex-contents">
@@ -411,7 +536,10 @@
 </section>
 
 
-<!-- <section class="sectionF">
+
+
+
+<section class="sectionF">
   
   <h2 class="alumni_caption">Our Notable Alumni</h2>
 
@@ -419,9 +547,7 @@
       <iframe src="alumni_page.html" frameborder="2" height="350px" width="100%"></iframe>
     </div>
 
-</section> -->
-
-
+</section>
 
 <section id="sectionG">
   <img src="../static/images/world.png" alt="news_icon" class="news_icon">
@@ -481,4 +607,4 @@
   </a>
 </section>
 </body>
-</html> 
+</html>  -->

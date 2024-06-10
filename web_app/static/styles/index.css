@@ -1,8 +1,10 @@
+
 body {
     background-color: whitesmoke;
     margin: auto;
     padding: auto;
     max-width: 100%;
+    scroll-behavior: smooth;
     overflow-x: hidden;
 
 }
@@ -38,44 +40,6 @@ body {
   text-decoration: 1px underline;
 }
 
-#prev {
-  position: absolute; 
-  top: 450px; 
-  left:auto;
-  width: 100px; 
-  height: 50px; 
-  margin-left: 3%; 
-  margin-top: auto; 
-  background-color: rgb(0, 0, 22);
-  color: azure;
-  text-align: center;
-  font-size: larger;
-  z-index: 10;
-  border: 2px solid rgb(0, 0, 22);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  overflow: hidden;
-}
-
-
-#next {
-  position: absolute; 
-  top: 450px; 
-  right: auto;
-  width: 100px; 
-  height: 50px; 
-  margin-left: 90%; 
-  margin-top: -10px; 
-  background-color:  rgb(0, 0, 22);
-  color: azure;
-  text-align: center;
-  font-size: larger;
-  z-index: 2;
-  border: 2px solid  rgb(0, 0, 22);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  overflow: hidden;
-}
 
 @media only screen and (max-width: 768px) {
   
@@ -413,7 +377,7 @@ display: none;
     position: relative;
     margin: -15px;
     margin-left: auto;
-    height: 800px;
+    height: 600px;
     width: 100%;
     z-index: 1;
     align-items: center;
@@ -434,8 +398,9 @@ display: none;
 }
 
 .sliding img {
+  margin-top: 10px;
   width: 100%;
-  height: 900px;
+  height: 100%;
 }
 
 * {box-sizing: border-box;}
@@ -538,23 +503,6 @@ display: none;
   transition: 5s ease;
 }
 
-.home_next_page_button {
-  width: 100px; 
-  height: 50px; 
-  position: relative; 
-  top: 50px; 
-  left: auto;
-  margin-left: 48%; 
-  margin-top: auto; 
-  background-color:  azure;
-  color: black;
-  text-align: center;
-  font-size: larger;
-  z-index: 2;
-  border: 2px solid  azure;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-}
 
 
 @media only screen and (max-width: 768px) {
@@ -607,6 +555,10 @@ display: none;
     flex-wrap: wrap;
   }
 }
+
+
+
+
 
 /* The Forst Section */
 .sectionA {
@@ -806,7 +758,7 @@ display: none;
   width: 120px; 
   height: 50px; 
   position: relative; 
-  top: 100px; 
+  top: 20px; 
   left:auto; 
   background-color: azure;
   color: black;
@@ -923,7 +875,7 @@ border-radius: 4px;
 
 #snr {
   position: relative;
-  top: 50px;
+  top: -30px;
   left: auto;
   width: 120px; 
   height: 50px; 
@@ -1026,42 +978,49 @@ padding: 2px 5px;
     margin-top: -20px;
     height: 1100px;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .half_circle_description {
-    margin-top: -1px;
-    height: 400px; 
-    margin-left: -200px;
-    width: 1400px;
-    border-radius: 43%; 
+    position: static;
+    top: auto;
+    background-color: antiquewhite;
+    height: 400px;
+    margin: 5%;
+    width: 90%;
+    overflow: hidden;
+    border-radius: 10px;
   }
 
   .description_header {
+    position: relative;
     top: 20px;
-    margin: 20px;
     width: 150px;
-    left: 35%;
-    font-size: 25px;
+    left: 7%;
+    text-align: flex; 
+    color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
-  
+
   .description_content {
-    margin: 20px;
-    top: 30px;
-    left: 35%;
+    position: relative;
+    top: 50px;
+    left: 7%;
+    width: 320px;
+    text-align: flex; 
     font-size: 15px;
-    width: 300px;
-}
+  }
 
-.pointing_arrow {
-  display: none;
-}
-.down_arrow {
-  display: inline;
-  position: relative;
-  top: 30px;
-  left: 40%;
+  .description_content span {
+    margin-top: 30px;
+    font-size: 15px;
+  }
 
-}
+  .pointing_arrow {
+    display: none;
+  }
 
 .jnr_snr_art { 
   width: 250px;
@@ -1129,6 +1088,238 @@ padding: 2px 5px;
     font-size: 15px;
   }
 }
+
+
+/* Styles for Extra-Curricular Activities Section */
+.sectionC {
+  position: relative;
+  margin-top: -10px;
+  z-index: 2;
+  padding: 2rem 0;
+  background-color: azure;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.column {
+  flex: 0 0 23%;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #e6e6e6;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive Styles for Extra-Curricular Activities Section */
+@media only screen and (max-width: 768px) {
+  .column {
+    flex: 0 0 48%;
+  }
+}
+
+/* Additional Styles for Extra-Curricular Activities Section */
+.sectionC h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.sectionC p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+.sectionTestimonials {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.sectionTestimonials .text-center {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sectionTestimonials .text-center h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.sectionTestimonials .text-center p {
+  font-size: 18px;
+  color: #666;
+}
+
+.testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-item {
+  background-color: #fff;
+  /* padding: 20px; */
+  width: 20%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-item.active {
+  transform: scale(1.1);
+}
+
+.testimonial-img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.testimonial-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.testimonial-role {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .testimonial-slider {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .testimonial-item {
+    min-width: 250px;
+    padding: 15px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+  }
+
+  .testimonial-name {
+    font-size: 16px;
+  }
+
+  .testimonial-role {
+    font-size: 12px;
+  }
+}
+
+.testimonial-item.hovered {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
