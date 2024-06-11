@@ -120,65 +120,73 @@
 
 
 
-  <div class="slideshow-container">
-    <div class="upper_slide_container">
-      <div class="sliding">
-        <div class="mySlides fade">
-            <img src="../static/images/disa.jpg">
-        </div>
-        <div class="mySlides fade">
-            <img src="../static/images/img1 (1).jpg">
-        </div>
-        <div class="mySlides fade">
-          <img src="../static/images/img2.jpg">
-        </div>
-        <div class="mySlides fade">
-          <img src="../static/images/img3.jpg">
+<div class="slideshow-container">
+  <div class="upper_slide_container">
+    <div class="sliding">
+      <div class="mySlides fade">
+        <div class="slide-content">
+          <img src="../static/images/disa.jpg" alt="Image 1">
+          <div class="slide-text">
+            <h2>Slide Title 1</h2>
+            <p>Description for slide 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="link1.html" class="slide-link">Learn More</a>
+          </div>
         </div>
       </div>
 
-    </div>
+      <div class="mySlides fade">
+        <div class="slide-content">
+          <img src="../static/images/disa.jpg" alt="Image 2">
+          <div class="slide-text">
+            <h2>Slide Title 2</h2>
+            <p>Description for slide 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="link2.html" class="slide-link">Learn More</a>
+          </div>
+        </div>
+      </div>
 
-    <div class="upper_banner">
-      <h1 class="slide_text_show">Crescent Heights</h1>
-      <h4 id="slide_text_motto"><i>...the home where leaders are built</i></h4>
-    </div>
-      <!--a href="#" id="inslide_apply_button">
-        <h2 style="margin-top: 7px;">Apply Now</h2>
-      </a-->
-    <div class="fading_span_dot">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span>
-    </div>
+      <div class="mySlides fade">
+        <div class="slide-content">
+          <img src="../static/images/disa.jpg" alt="Image 3">
+          <div class="slide-text">
+            <h2>Slide Title 3</h2>
+            <p>Description for slide 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="link3.html" class="slide-link">Learn More</a>
+          </div>
+        </div>
+      </div>
 
-    <script>
-        let slideIndex = 0;
-        showSlides();
-        
-        function showSlides() {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 11000);
-        }
-    </script>
+      <div class="mySlides fade">
+        <div class="slide-content">
+          <img src="../static/images/disa.jpg" alt="Image 4">
+          <div class="slide-text">
+            <h2>Slide Title 4</h2>
+            <p>Description for slide 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="link4.html" class="slide-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
   </div>
+</div>
+
+  <div class="upper_banner">
+    <h1 class="slide_text_show">Crescent Heights</h1>
+    <!-- <h4 id="slide_text_motto"><i>...the home where leaders are built</i></h4> -->
+  </div>
+  
+  <div class="fading_span_dot">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
 
   
 <!-- The First Section -->
-<div class="sectionA">
+  <div class="sectionA">
     <div class="value_container">
       <div class="value_styling">
         <img src="../static/images/diamond.png" class="value_img">
@@ -383,7 +391,11 @@
 <!-- New Section: Extra-Curricular Activities -->
 <section class="sectionC">
   <div class="container">
-    <h2 class="text-center">Extra-Curricular Activities</h2>
+    <h2 class="text-center">Extra-Curricular Activities</h2><br>
+    <div class="const_undeline">
+      <hr id="hr_1">
+      <hr id="hr_2">
+    </div>
     <p class="text-center">Explore the various activities available to our students to enhance their skills and interests.</p>
     <div class="row">
       <div class="column">
@@ -393,6 +405,7 @@
             <div class="card-body">
               <h5 class="card-title">Sports</h5>
               <p class="card-text">Engage in various sports to promote physical fitness and teamwork.</p>
+              <a href="activity1.html" class="btn">Learn More</a>
             </div>
           </div>
         </a>
@@ -404,6 +417,7 @@
             <div class="card-body">
               <h5 class="card-title">Arts & Crafts</h5>
               <p class="card-text">Unleash creativity through diverse arts and crafts activities.</p>
+              <a href="activity2.html" class="btn">Learn More</a>
             </div>
           </div>
         </a>
@@ -415,6 +429,7 @@
             <div class="card-body">
               <h5 class="card-title">Music & Drama</h5>
               <p class="card-text">Participate in music and drama to develop performance skills.</p>
+              <a href="activity3.html" class="btn">Learn More</a>
             </div>
           </div>
         </a>
@@ -426,6 +441,7 @@
             <div class="card-body">
               <h5 class="card-title">Science Club</h5>
               <p class="card-text">Join the science club to explore and experiment with scientific ideas.</p>
+              <a href="activity4.html" class="btn">Learn More</a>
             </div>
           </div>
         </a>
@@ -444,7 +460,11 @@
 
 <section class="sectionTestimonials">
   <div class="text-center">
-    <h2>What Our Students Say</h2>
+    <h2>What Our Students Say</h2><br>
+    <div class="const_undeline">
+      <hr id="hr_1">
+      <hr id="hr_2">
+    </div>
     <p>Hear from our satisfied students</p>
   </div>
   <div class="testimonial-slider-wrapper">
@@ -452,27 +472,33 @@
     <div class="testimonial-slider">
       <div class="testimonial-item">
         <img src="../static/images/schoolboy.jpg" alt="Student 1" class="testimonial-img">
-        <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac vestibulum erat.</p>
-        <p class="testimonial-name">John Doe</p>
+        <p class="testimonial-text">I had an amazing experience at Crescent Heights. The teachers were knowledgeable and supportive, and the extracurricular activities were engaging.</p>
+        <p class="testimonial-name">Yahya Yusuf</p>
         <p class="testimonial-role">Alumni</p>
       </div>
       <div class="testimonial-item">
         <img src="../static/images/schoolboy.jpg" alt="Student 2" class="testimonial-img">
-        <p class="testimonial-text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p class="testimonial-name">Jane Smith</p>
+        <p class="testimonial-text">Crescent Heights provided me with a well-rounded education. The school's focus on both academics and extracurricular activities helped me develop important skills.</p>
+        <p class="testimonial-name">Mustapha Muhammad</p>
         <p class="testimonial-role">Current Student</p>
       </div>
       <div class="testimonial-item">
         <img src="../static/images/schoolboy.jpg" alt="Student 3" class="testimonial-img">
-        <p class="testimonial-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p class="testimonial-name">Emily Johnson</p>
+        <p class="testimonial-text">I am grateful for my time at Crescent Heights. The school's supportive community and dedicated teachers helped me achieve my academic goals.</p>
+        <p class="testimonial-name">Aminat Ibrahim</p>
         <p class="testimonial-role">Graduate</p>
       </div>
       <div class="testimonial-item">
         <img src="../static/images/schoolboy.jpg" alt="Student 4" class="testimonial-img">
-        <p class="testimonial-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p class="testimonial-name">Emily Johnson</p>
-        <p class="testimonial-role">Graduate</p>
+        <p class="testimonial-text">Crescent Heights provided me with a nurturing environment to grow both academically and personally. The school's emphasis on holistic development has made a lasting impact on my life.</p>
+        <p class="testimonial-name">Kahdijah Saheed</p>
+        <p class="testimonial-role">Alumni</p>
+      </div>
+      <div class="testimonial-item">
+        <img src="../static/images/schoolboy.jpg" alt="Student 2" class="testimonial-img">
+        <p class="testimonial-text">Crescent Heights provided me with a well-rounded education. The school's focus on both academics and extracurricular activities helped me develop important skills.</p>
+        <p class="testimonial-name">Mustapha Muhammad</p>
+        <p class="testimonial-role">Current Student</p>
       </div>
       <!-- Add more testimonials as needed -->
     </div>
@@ -484,24 +510,28 @@
 <section class="sectionSchoolAdmins">
   <div class="container">
     <div class="text-center">
-      <h2>School Administrators</h2>
+      <h2 style="font-size: 30px;">School Administrations</h2><br>
+      <div class="const_undeline">
+        <hr id="hr_1">
+        <hr id="hr_2">
+      </div>
       <p>Welcome, administrators! Access important resources and information here.</p>
     </div>
     <div class="admin-resources">
       <div class="resource">
         <h3>Staff Directory</h3>
         <p>Find contact information for all school staff members.</p>
-        <a href="staff-directory.html">View Directory</a>
+        <a href="#" class="btn">View Directory</a>
       </div>
       <div class="resource">
         <h3>School Policies</h3>
         <p>Review school policies and guidelines.</p>
-        <a href="school-policies.html">View Policies</a>
+        <a href="#" class="btn">View Policies</a>
       </div>
       <div class="resource">
         <h3>Administrative Services</h3>
         <p>Access administrative services for managing school operations.</p>
-        <a href="admin-services.html">View Services</a>
+        <a href="#" class="btn">View Services</a>
       </div>
       <!-- Add more resources as needed -->
     </div>
@@ -510,34 +540,47 @@
 
 <section class="sectionNews">
   <div class="text-center">
-    <h2>News and Events</h2>
+    <h2>News and Events</h2><br>
+    <div class="const_undeline">
+      <hr id="hr_1">
+      <hr id="hr_2">
+    </div>
     <p>Stay updated with the latest news and events</p>
   </div>
   <div class="news-slider">
     <div class="news-item">
-      <img src="../static/images/relig.jpg" alt="News 1" class="news-img">
+      <img src="../static/images/img2.jpg" alt="News 1" class="news-img">
       <div class="news-content">
-        <h3 class="news-title">News Title 1</h3>
-        <p class="news-date">June 8, 2024</p>
-        <p class="news-text">Brief description of the news or event. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h3 class="news-title">Exciting Summer Camp</h3>
+        <p class="news-date">July 15, 2024</p>
+        <p class="news-text">Join us for an exciting summer camp filled with fun activities and learning opportunities. Don't miss out on this amazing experience!</p>
       </div>
     </div>
     <div class="news-item">
-      <img src="../static/images/disa.jpg" alt="News 2" class="news-img">
+      <img src="../static/images/lab.jfif" alt="News 2" class="news-img">
       <div class="news-content">
-        <h3 class="news-title">News Title 2</h3>
-        <p class="news-date">June 7, 2024</p>
-        <p class="news-text">Brief description of the news or event. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h3 class="news-title">Annual Science Fair</h3>
+        <p class="news-date">August 5, 2024</p>
+        <p class="news-text">Get ready for our annual science fair where students showcase their innovative projects and experiments. It's a great opportunity to learn and be inspired!</p>
       </div>
     </div>
     <div class="news-item">
-      <img src="../static/images/campal.jpg" alt="News 3" class="news-img">
+      <img src="../static/images/img3.jpg" alt="News 3" class="news-img">
       <div class="news-content">
-        <h3 class="news-title">News Title 3</h3>
-        <p class="news-date">June 6, 2024</p>
-        <p class="news-text">Brief description of the news or event. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h3 class="news-title">Sports Day Celebration</h3>
+        <p class="news-date">September 10, 2024</p>
+        <p class="news-text">Join us for a day filled with sports activities and friendly competitions. It's a chance to showcase your athletic skills and have a great time with friends!</p>
       </div>
     </div>
+    <div class="news-item">
+      <img src="../static/images/campal.jpg" alt="News 4" class="news-img">
+      <div class="news-content">
+        <h3 class="news-title">Art Exhibition</h3>
+        <p class="news-date">October 20, 2024</p>
+        <p class="news-text">Experience the creativity and talent of our students at the annual art exhibition. It's a visual treat that you don't want to miss!</p>
+      </div>
+    </div>
+    
     <!-- Add more news items as needed -->
   </div>
   <button class="news-nav-button prev">Previous</button>
@@ -547,9 +590,13 @@
 
 <section class="sectionVirtualTour">
   <div class="text-center">
-    <h2>Take a Virtual Tour</h2>
+    <h2>Take a Virtual Tour</h2><br>
+    <div class="const_undeline">
+      <hr id="hr_1">
+      <hr id="hr_2">
+    </div>
     <p>Explore our campus and facilities from the comfort of your home.</p>
-    <button class="virtual-tour-button">View Larger Map</button>
+    <button class="virtual-tour-button"><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.592020171347!2d3.9098940741416643!3d7.832930306565178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10375959103d6c31%3A0xc0617cfc3cb80fb6!2sCrescent%20heights.%20Oyo.!5e0!3m2!1sen!2sng!4v1690306759778!5m2!1sen!2sng" target="_blank">View Larger Map</a></button>
   </div>
   <div class="school_map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.592020171347!2d3.9098940741416643!3d7.832930306565178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10375959103d6c31%3A0xc0617cfc3cb80fb6!2sCrescent%20heights.%20Oyo.!5e0!3m2!1sen!2sng!4v1690306759778!5m2!1sen!2sng" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -581,10 +628,9 @@
       <div class="footer-column">
         <h3>Connect With Us</h3>
         <ul class="social-icons">
-          <li><a href="#"><img src="../static/images/facebook.png" alt="Facebook"></a></li>
-          <li><a href="#"><img src="../static/images/twitter.png" alt="Twitter"></a></li>
-          <li><a href="#"><img src="../static/images/instagram.png" alt="Instagram"></a></li>
-          <li><a href="#"><img src="../static/images/linkedin.png" alt="LinkedIn"></a></li>
+          <li><a href="#"><img src="../static/images/facebook-removebg-preview.png" alt="Facebook" class="img-fluid"></a></li>
+          <li><a href="#"><img src="../static/images/twitter-removebg-preview.png" alt="Twitter" class="img-fluid"></a></li>
+          <li><a href="#"><img src="../static/images/instagram-removebg-preview.png" alt="Instagram" class="img-fluid"></a></li>
         </ul>
       </div>
     </div>

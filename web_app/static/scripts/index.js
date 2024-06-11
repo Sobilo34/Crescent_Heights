@@ -1,10 +1,34 @@
+// Upper Slide
+document.addEventListener('DOMContentLoaded', () => {
+  let slideIndex = 0;
+  const slides = document.getElementsByClassName('mySlides');
+  const dots = document.getElementsByClassName('dot');
 
-  document.addEventListener('DOMContentLoaded', () => {
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(' active', '');
+    }
+    slides[slideIndex-1].style.display = 'block';
+    dots[slideIndex-1].className += ' active';
+    setTimeout(showSlides, 11000); // Change slide every 11 seconds
+  }
+
+  showSlides();
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;
   const testimonials = document.querySelectorAll('.testimonial-item');
-  const slider = document.querySelector('.testimonial-slider');
   const nextButton = document.querySelector('.testimonial-nav-button.next');
   const prevButton = document.querySelector('.testimonial-nav-button.prev');
+  const gap = -230; // Set the gap to 10px
   let interval;
 
   function showSlide(index) {
@@ -17,9 +41,10 @@
       currentIndex = index;
     }
 
-    const offset = -currentIndex * (testimonials[0].offsetWidth + 10); // 10 is the gap
+    const itemWidth = testimonials[0].offsetWidth + gap;
     testimonials.forEach((testimonial, i) => {
-      testimonial.style.transform = `translateX(${offset + (i * (testimonials[0].offsetWidth + 10))}px)`;
+      const offset = (i - currentIndex) * itemWidth; // Calculate offset for each item
+      testimonial.style.transform = `translateX(${offset}px)`;
     });
   }
 
@@ -65,12 +90,15 @@
 });
 
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;
   const newsItems = document.querySelectorAll('.news-item');
   const slider = document.querySelector('.news-slider');
   const nextButton = document.querySelector('.news-nav-button.next');
   const prevButton = document.querySelector('.news-nav-button.prev');
+  const gap = -200; // Set the gap to 10px
   let interval;
 
   function showSlide(index) {
@@ -83,9 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
       currentIndex = index;
     }
 
-    const offset = -currentIndex * (newsItems[0].offsetWidth + 20); // 20 is the gap
+    const offset = -currentIndex * (newsItems[0].offsetWidth + gap);
     newsItems.forEach((news, i) => {
-      news.style.transform = `translateX(${offset + (i * (newsItems[0].offsetWidth + 20))}px)`;
+      news.style.transform = `translateX(${offset + (i * (newsItems[0].offsetWidth + gap))}px)`;
     });
   }
 
@@ -129,6 +157,8 @@ document.addEventListener('DOMContentLoaded', () => {
   showSlide(currentIndex);
   startAutoSlide(); // Start automatic sliding
 });
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
