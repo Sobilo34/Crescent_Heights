@@ -1222,6 +1222,9 @@ padding: 2px 5px;
 
 /* Responsive Styles for Extra-Curricular Activities Section */
 @media only screen and (max-width: 768px) {
+  .sectionC {
+    margin-top: -10px;
+  }
   .column {
     flex: 0 0 48%;
     margin-bottom: 1.5rem; /* Adjusted margin for smaller screens */
