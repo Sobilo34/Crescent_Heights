@@ -1,118 +1,76 @@
+body {
+    color: #333;
+}
 .cur_img {
     position: relative;
     left: auto;
-    top: 120px;
+    top: 110px;
     height: 300px;
     width: 100%; 
 }
 
-.section {
-    margin-left: 150px;
-    margin-top: -250px;
-    width: 80%;
-    color: rgb(53, 50, 50);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-
-.jnr_caption {
-    text-align: flex;
+main {
     position: relative;
-    top: 30px;
-    left: 15%;
-    color: red;
-    font-family: algerian;
+    top: -300px;
 }
 
-.jnr_subj {
-    margin-left: 15%;
-    margin-top: 80px;
+.curriculum-section, .junior-section, .senior-section, .conclusion-section {
+    margin-top: 0%;
+    margin: 2em 10%;
+    padding: 1em;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.snr_caption {
-    text-align: flex;
-    position: relative;
-    top: -850px;
-    left: 70%;
-    color: red;
-    font-family: algerian;
+.section-caption {
+    color: #333;
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 0.5em;
 }
 
-.snr_subj {
-    margin-left: 70%;
-    margin-top: -820px;
+.subject-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
 }
 
-.conclusion {
-    margin: 10%;
-    font-family: sans-serif;
+.subject-list h3 {
+    font-size: 18px;
+    color: #555;
+    margin: 0.2em 0;
+}
+
+.conclusion-section {
+    text-align: center;
     font-weight: 500;
 }
 
 @media only screen and (max-width: 768px) {
-    .section {
-        margin-left: 10%;
-        margin-top: -350px;
-        width: 80%;
-        font-size: 12px;
-      }
-    
-    .jnr_caption {
-        top: 40px;
-        left: 5%;
-        font-size: 17px;
-        width: 150px;
-        text-align: center;
+    .curriculum-section, .junior-section, .senior-section, .conclusion-section {
+        margin: 1em 5%;
+        padding: 1em;
     }
-    
-    .jnr_subj {
-        margin-left: 4%;
-        margin-top: 80px;
-        font-size: 12px;
-    }
-    
-    .snr_caption {
-        top: -672px;
-        left: 53%;
-        font-size: 17px;
-        width: 150px;
-        text-align: center;
-    }
-    
-    .snr_subj {
-        margin-left: 60%;
-        margin-top: -645px;
-        font-size: 12px;
-    }
-    
-    .conclusion {
-        margin: 10%;
-        font-size: 15px;
-        font-weight: 200;
+
+    .subject-list {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
-
-   .last_section {
+/* .footer {
     position: relative;
     display: block;
-    top: auto;
-    bottom: auto;
+    top: 0px;
     left: auto;
-    width: 100%;
-    height: 350px;
-    background-color: rgb(0, 0, 22);
-    color: wheat;
-      
+  
     }
-    
+  
     
     @media only screen and (max-width: 1000px) {
-      .last_section {
-        top: auto;
-        bottom: auto;
-        left: auto;
-        width: 100%;
-        height: 420px;
-        
+      .footer {
+        top: 2000px;
       }
-    }
+    } */

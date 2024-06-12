@@ -4,7 +4,7 @@ body {
 .adm_img {
     position: relative;
     left: auto;
-    top: 120px;
+    top: 110px;
     height: 300px;
     width: 100%; 
 }
@@ -29,7 +29,7 @@ body {
 
 .welcome_header {
     color: black;
-    margin: 10%;
+    margin: 12%;
     margin-top: -380px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -90,21 +90,20 @@ body {
     
     .admission_procedure {
         margin-top: 50px;
-        margin-left: -15px;
         width: 300px;
     }
     
     .age_cons {
         position: relative;
         top: auto;
-        left: 5%;
+        left: 10%;
         font-size: 20px;
     }
     
     .underlineB{
         position: relative;
         top: -40px;
-        left: -40px;
+        left: -10px;
         height: 3px;
         width: 170px;
       }
@@ -112,7 +111,7 @@ body {
       blockquote {
         position: relative;
         top: -70px;
-        left: -15px;
+        left: 0px;
         font-size:17px;
         font-family: calibri light;
         color: black;
@@ -121,27 +120,18 @@ body {
       }
   }
 
-   .last_section {
+   /* .footer {
     position: relative;
     display: block;
-    top: 120px;
+    top: auto;
     bottom: auto;
     left: auto;
-    width: 100%;
-    height: 350px;
-    background-color: rgb(0, 0, 22);
-    color: wheat;
-      
+
     }
 
     
     @media only screen and (max-width: 1000px) {
-      .last_section {
-        top: auto;
-        bottom: auto;
-        left: auto;
-        width: 100%;
-        height: 420px;
-        
+      .footer {
+        top: -00px;
       }
-    }
+    } */
