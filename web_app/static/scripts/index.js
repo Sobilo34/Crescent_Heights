@@ -86,7 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize the first slide
   showSlide(currentIndex);
-  startAutoSlide(); // Start automatic sliding
+
+  // Start automatic sliding only on large screens
+  if (window.innerWidth > 768) {
+    startAutoSlide(); // Start automatic sliding
+  }
 });
 
 
@@ -155,7 +159,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize the first slide
   showSlide(currentIndex);
-  startAutoSlide(); // Start automatic sliding
+
+  // Start automatic sliding only on large screens
+  if (window.innerWidth > 768) {
+    startAutoSlide(); // Start automatic sliding
+  } else {
+    stopAutoSlide(); // Disable automatic sliding for small screens
+  }
 });
 
 
