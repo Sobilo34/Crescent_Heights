@@ -509,6 +509,7 @@ img {
       margin: 0 2px;
       position: relative;
       bottom: 10px;
+      display: none;
     }
   }
 
