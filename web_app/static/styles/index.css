@@ -484,6 +484,15 @@ img {
 }
 
   @media only screen and (max-width: 600px) {
+    .slide-text {
+      position: absolute;
+      bottom: 70px;
+      right: 50%;
+      transform: translateX(50%);
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      z-index: 10;
+    }
     .slide-text h2 {
       font-size: 20px;
       margin-bottom: 10px;
