@@ -389,7 +389,7 @@ img {
 
 .slide-text {
   position: absolute;
-  bottom: 100px;
+  bottom: 600px;
   right: 50%;
   transform: translateX(50%);
   color: #fff;
