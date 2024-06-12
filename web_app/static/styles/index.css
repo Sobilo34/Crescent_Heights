@@ -9,69 +9,6 @@ body {
 
 }
 
-.banner {
-  position: relative;
-  top: -180px;
-  height: 300px;
-  width: 100%;
-  background-color: rgb(44, 43, 43);
-  opacity: 0.4;
-}
-
-.banner_fill {
-  position: relative;
-  top: -400px;
-  height: 200px;
-  text-align: center;
-  background-color: transparent;
-  color: white;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.banner_fill h1 {
-  font-size: 50px;
-  font-weight: 100px;
-}
-
-.banner_fill a {
-  font-size: 17px;
-  font-weight: 50px;
-  padding: 10px;
-  text-decoration: 1px underline;
-}
-
-
-@media only screen and (max-width: 768px) {
-  
-  .banner_fill h1 {
-    font-size: 30px;
-  }
-  
-  .banner_fill a {
-    font-size: 13px;
-  }
-  #prev {
-    position: relative; 
-    top: -370px; 
-    left: auto;
-    width: 80px; 
-    height: 20px; 
-    margin-left: 3%; 
-    font-size: small;
- }
-  
-  
-  #next {
-    position: relative; 
-    top: -370px; 
-    left: 40%;
-    width: 80px; 
-    height: 20px; 
-    margin-left: 3%; 
-    font-size: small;
-  }
-}
-
 /* The Header Region Styling */
 header {
   position: absolute;
@@ -1380,6 +1317,10 @@ padding: 2px 5px;
   .testimonial-role {
     font-size: 12px;
   }
+
+  .testimonial-nav-button {
+    display: none;
+  }
 }
 
 /* News Styling */
@@ -1514,6 +1455,10 @@ padding: 2px 5px;
 
   .news-text {
     font-size: 14px;
+  }
+
+  .news-nav-button {
+    display: none;
   }
 }
 
@@ -1865,7 +1810,7 @@ padding: 2px 5px;
 .footer {
   margin-top: 10%;
   background-color: rgb(0, 0, 22);
-  color: #fff;
+  color: wheat;
   padding: 50px 0;
 }
 
@@ -1882,6 +1827,10 @@ padding: 2px 5px;
 
 .footer-column {
   flex: 0 0 30%;
+}
+
+.footer a {
+  color: wheat;
 }
 
 .footer-column h3 {
@@ -1928,13 +1877,13 @@ padding: 2px 5px;
 }
 
 .social-icons a {
-  color: #fff;
+  color: wheat;
   font-size: 20px;
   text-decoration: none;
 }
 
 .social-icons a:hover {
-  color: #ccc;
+  color: wheat;
 }
 
 .footer-bottom {

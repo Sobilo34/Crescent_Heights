@@ -1,11 +1,14 @@
 body {
     height: 500px;
     max-height: 500px;
+    background-color: #dad5d5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(46, 45, 45);
 }
 .anthem_img {
     position: relative;
     left: auto;
-    top: 120px;
+    top: 110px;
     height: 300px;
     width: 100%; 
     overflow: hidden;
@@ -39,6 +42,7 @@ body {
     width: 500px;
     height: 650px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
     overflow: hidden;
 }
 
@@ -170,8 +174,8 @@ video {
 @media only screen and (max-width: 768px) {
     .anthem_caption {
         position: relative;
-        top: -380px;
-        left: 5%;
+        top: -350px;
+        left: 10%;
         text-align: flex;
         font-size: 20px;
         color: black;
@@ -180,8 +184,8 @@ video {
     
     .underlineA{
         position: relative;
-        top: -395px;
-        left: 5%;
+        top: -365px;
+        left: 10%;
         background-color: blue;
         height: 3px;
         width: 150px;
@@ -191,8 +195,8 @@ video {
     
     .anthem_text {
         position: relative;
-        left: 5%;
-        top: -390px;
+        left: 10%;
+        top: -360px;
         width: 500px;
         height: 650px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -206,7 +210,7 @@ video {
     }
     video {
         position: absolute;
-        top: 1200px;
+        top: 1100px;
         left: 10%;
         width: 80%;
         height: 200px;
@@ -215,7 +219,7 @@ video {
     
     .play_video {
         position: absolute;
-        top: 1140px;
+        top: 1000px;
         left: 20%;
         text-align: center;
         font-size: 25px;
@@ -225,29 +229,29 @@ video {
     .our_vision {
         position: absolute;
         top: auto;
-        margin-top: -100px;
-        left: 15%;
+        margin-top: -130px;
+        left: 12%;
         font-size: 20px;
     }
     
     .underline{
-        top: -120px;
+        top: -150px;
         left: auto;
         height: 3px;
         width: 120px;
     }
     
     .vision_text {
-        top: -150px;
-        left: 15%;
+        top: -180px;
+        left: 12%;
         height: 100px;
         width: 250px;
         text-align: start;
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .mission {
-        top: -250px;
+        top: -280px;
         left: -50px;
         font-size: 20px;
         width: 200px;
@@ -255,7 +259,7 @@ video {
     
     .underline2{
         position: relative;
-        top: -340px;
+        top: -370px;
         left: 0%;
         height: 3px;
         width: 180px;
@@ -263,37 +267,26 @@ video {
     
     .mission_text {
         position: relative;
-        top: -370px;
+        top: -400px;
         height: 100px;
         left: -50px;
         margin-left: 100px;
         width: 250px;
         text-align: start;
-        font-size: 16px;
+        font-size: 14px;
     }
 }
-
-   .last_section {
+   .footer {
     position: relative;
     display: block;
-    top: -600px;
+    top: -700px;
     bottom: auto;
     left: auto;
-    width: 100%;
-    height: 350px;
-    background-color: rgb(0, 0, 22);
-    color: wheat;
-    overflow: hidden;
-      
     }
+
     
     @media only screen and (max-width: 1000px) {
-      .last_section {
-        top: -300px;
-        bottom: auto;
-        left: auto;
-        width: 100%;
-        height: 420px;
-        
+      .footer {
+        top: -400px;
       }
     }
