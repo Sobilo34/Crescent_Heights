@@ -14,18 +14,18 @@
 }
 
 #cocoric h4 {
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
 }
 
 .caption {
   color: red;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .cap_content {
   margin-top: 50px;
-  font-size: 13px;
+  font-size: 17px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -33,20 +33,19 @@
       margin: 12%;
       margin-top: -300px;
       color: rgb(53, 50, 50);
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
   #cocoric h4 {
-      font-size: 15px;
+      font-size: 18px;
   }
 
   .caption {
       color: red;
-      font-size: 15px;
+      font-size: 17px;
   }
 
   .cap_content {
       margin-top: 50px;
-      font-size: 11px;
+      font-size: 15px;
   }
 }
