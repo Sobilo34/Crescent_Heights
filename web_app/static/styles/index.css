@@ -1905,9 +1905,23 @@ padding: 2px 5px;
   color: wheat;
 }
 
+
 .footer-bottom {
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
   text-align: center;
 }
+
+.footer-bottom p {
+  margin: 0;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
 
 /* For small screens */
 @media (max-width: 767px) {
