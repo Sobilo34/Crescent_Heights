@@ -1016,18 +1016,9 @@ padding: 2px 5px;
   border-radius: 3px;
 }
 
-#myBtm {
+#myBtm, #myBtn {
   position: relative;
   top: -250px;
-  width: 249px; 
-  height: 250px; 
-  opacity: 0.5;
-  border-radius: 4px;
-}
-
-#myBtn {
-  position: relative;
-  top: -240px;
   width: 249px; 
   height: 250px; 
   opacity: 0.5;
