@@ -4,7 +4,7 @@ body {
     background-color: #dad5d5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(46, 45, 45);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .anthem_img {
     position: relative;
