@@ -1,4 +1,6 @@
-
+body {
+  overflow: hidden;
+}
 /* History Homepage */
 #history {
   position: absolute;
