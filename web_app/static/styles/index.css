@@ -1034,6 +1034,9 @@ padding: 2px 5px;
   border-radius: 4px;
 }
 
+.click_info {
+  font-size: smaller;
+}
 .close {
   font-weight: bold;
   margin-right: 30px;
