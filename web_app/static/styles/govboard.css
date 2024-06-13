@@ -6,6 +6,85 @@
     width: 100%; 
 }
 
+.governing-board {
+  margin-top: -400px;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.board-intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.board-intro h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.board-intro p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.board-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.board-member {
+  width: 250px;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+.board-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.board-member h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.board-member p {
+  font-size: 1em;
+  color: #666;
+}
+
+@media only screen and (max-width: 1000px) {
+  .gov_img {
+    top: 200px;
+    height: 200px;
+  }
+
+  .governing-board {
+    margin-top: -200px;
+    padding: 20px 0;
+  }
+
+  .board-member {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .board-member h3 {
+    font-size: 1.2em;
+  }
+
+  .board-member p {
+    font-size: 0.9em;
+  }
+}
+
    /* .footer {
     position: relative;
     display: block;
