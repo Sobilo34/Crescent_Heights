@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const testimonials = document.querySelectorAll('.testimonial-item');
   const nextButton = document.querySelector('.testimonial-nav-button.next');
   const prevButton = document.querySelector('.testimonial-nav-button.prev');
-  const gap = -230; // Set the gap to 10px
+  const gap = -230; // Set the gap to 230px
   let interval;
 
   function showSlide(index) {
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const slider = document.querySelector('.news-slider');
   const nextButton = document.querySelector('.news-nav-button.next');
   const prevButton = document.querySelector('.news-nav-button.prev');
-  const gap = -200; // Set the gap to 10px
+  const gap = -230; // Set the gap to 10px
   let interval;
 
   function showSlide(index) {
