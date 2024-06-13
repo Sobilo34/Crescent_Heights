@@ -10,6 +10,87 @@
   <link rel="stylesheet" href="../static/styles/admission.css">
   <link rel="stylesheet" href="../static/styles/styles.css">
 </head>
+<style>
+.payment-content {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.intro h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.method {
+  width: 300px;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+.method h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.method p, .method ul {
+  font-size: 1em;
+  color: #666;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.method ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.method ul li {
+  margin-bottom: 5px;
+}
+
+.pay-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) { .method { width: 100%; } }
+
+</style>
 <body>
   <nav id="lop"></nav>
   <script src ="../static/scripts/index.js"></script>
@@ -130,7 +211,45 @@
 <!--a href="about.html"><button id="prev">Previous</button></a> 
 <a href="portal.html"><button id="next">Next</button></a-->
 
+<!-- Main Content Section -->
+<section class="payment-content">
+  <div class="container">
+    <div class="intro">
+      <h2>Payment Information</h2>
+      <p>We offer various payment methods to make the fee payment process as convenient as possible for our parents and guardians. Below you will find detailed information on each payment method available.</p>
+    </div>
 
+    <div class="payment-methods">
+      <div class="method">
+        <h3>Bank Transfer</h3>
+        <p>You can transfer the fees directly to our bank account. Please use the following details:</p>
+        <ul>
+          <li>Bank: Example Bank</li>
+          <li>Account Name: Crescent Heights School</li>
+          <li>Account Number: 1234567890</li>
+          <li>Branch: Oyo State Branch</li>
+        </ul>
+        <p>After making the transfer, please email a copy of the transfer receipt to payments@example.com for confirmation.</p>
+      </div>
+      
+      <div class="method">
+        <h3>Online Payment</h3>
+        <p>You can pay the fees online using our secure payment gateway. Click the button below to proceed:</p>
+        <button class="pay-button">Pay Now</button>
+      </div>
+      
+      <div class="method">
+        <h3>Cheque Payment</h3>
+        <p>Cheques should be made payable to "Crescent Heights School" and can be submitted to the school office during working hours.</p>
+      </div>
+
+      <div class="method">
+        <h3>Cash Payment</h3>
+        <p>Cash payments can be made directly at the school office. Please ensure you collect a receipt after the payment.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container">
