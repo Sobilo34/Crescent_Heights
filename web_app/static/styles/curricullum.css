@@ -52,11 +52,13 @@ main {
     .curriculum-section, .junior-section, .senior-section, .conclusion-section {
         margin: 1em 5%;
         padding: 1em;
+        font-size: smaller;
     }
 
     .subject-list {
         flex-direction: column;
         align-items: center;
+        font-size: smaller;
     }
 }
 
