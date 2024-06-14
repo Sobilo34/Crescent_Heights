@@ -17,7 +17,7 @@ class Application(BaseModel, Base):
     parent_name = Column(String(128), nullable=False)
     parent_contact = Column(String(15), nullable=False)
     status = Column(String(20), default='Pending')  # Status of the application
-    documents = relationship('Document', back_populates='application')
+    # documents = relationship('Document', back_populates='application')
 
     def __init__(self, *args, **kwargs):
         """initializes application"""

@@ -49,11 +49,6 @@ def admission():
     """ the admission page of the CHO Website """
     return render_template('admission.html', cache_id=str(uuid.uuid4()))
 
-@app.route('/application', strict_slashes=False)
-def application():
-    """ the admission page of the CHO Website """
-    return render_template('application.html', cache_id=str(uuid.uuid4()))
-
 @app.route('/anthem', strict_slashes=False)
 def anthem():
     """ the anthem page of the CHO Website """
@@ -98,6 +93,24 @@ def religious():
 def portal():
     """ the portal page of the CHO Website """
     return render_template('portal.html', cache_id=str(uuid.uuid4()))
+
+
+@app.route('/application', strict_slashes=False, methods=['GET', 'POST'])
+def application():
+    """ the page for submitting an application """
+    if request.method == 'POST':
+        url = getenv('CHO_API_URL') + '/applications'
+        data = request.form.to_dict()
+
+        data_json = json.dumps(data)
+        response = requests.post(url, data=data_json, headers={'Content-Type': 'application/json'})
+        if response.status_code == 201:
+            flash('Application submitted successfully', 'alert alert-success')
+            return redirect(url_for('application_page'))
+        else:
+            flash('Application submission failed', 'alert alert-danger')
+            return redirect(url_for('application_page'))
+    return render_template('application.html', cache_id=str(uuid.uuid4()))
 
 @app.route('/signup', methods=['GET', 'POST'], strict_slashes=False)
 @app.route('/signup', methods=['GET', 'POST'])
@@ -192,22 +205,6 @@ def profile():
 
     return render_template('profile.html', cache_id=str(uuid.uuid4()), user=user)
 
-@app.route('/application', strict_slashes=False, methods=['GET', 'POST'])
-def application_page():
-    """ the page for submitting an application """
-    if request.method == 'POST':
-        url = getenv('CHO_API_URL') + '/applications'
-        data = request.form.to_dict()
-
-        data_json = json.dumps(data)
-        response = requests.post(url, data=data_json, headers={'Content-Type': 'application/json'})
-        if response.status_code == 201:
-            flash('Application submitted successfully', 'alert alert-success')
-            return redirect(url_for('application_page'))
-        else:
-            flash('Application submission failed', 'alert alert-danger')
-            return redirect(url_for('application_page'))
-    return render_template('application.html', cache_id=str(uuid.uuid4()))
 
 @login_required
 @app.route('/application/<application_id>', strict_slashes=False, methods=['GET', 'POST', 'DELETE'])

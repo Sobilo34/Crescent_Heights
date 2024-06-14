@@ -1,16 +1,12 @@
-#!/usr/bin/python3
-"""  API actions for application """
-from werkzeug.utils import secure_filename
-from models.user import User
-from models.application import Application
-from models.images import Image
-from models import storage
 from api.v1.views import app_views
 from flask import abort, jsonify, make_response, request
 from flasgger.utils import swag_from
 from flask import request
 import os
+from werkzeug.utils import secure_filename
 
+#!/usr/bin/python3
+"""  API actions for application """
 
 @app_views.route('/applications', methods=['GET'], strict_slashes=False)
 @swag_from('documentation/applications/all_applications.yml')
@@ -27,10 +23,10 @@ def get_applications():
 
 @app_views.route('/applications/<application_id>', methods=['GET'],
                  strict_slashes=False)
-@swag_from('documentation/applications/get_application.yml', methods=['GET'])
+@swag_from('documentation/applications/get_application.yml')
 def get_application(application_id):
     """ Retrieves an application """
-    application = storage.get(application, application_id)
+    application = storage.get(Application, application_id)
     if not application:
         abort(404)
 
@@ -39,13 +35,13 @@ def get_application(application_id):
 
 @app_views.route('/applications/<application_id>', methods=['DELETE'],
                  strict_slashes=False)
-@swag_from('documentation/applications/delete_application.yml', methods=['DELETE'])
+@swag_from('documentation/applications/delete_application.yml')
 def delete_application(application_id):
     """
-    Deletes a application Object
+    Deletes an application Object
     """
 
-    application = storage.get(application, application_id)
+    application = storage.get(Application, application_id)
 
     if not application:
         abort(404)
@@ -57,20 +53,32 @@ def delete_application(application_id):
 
 
 @app_views.route('/applications', methods=['POST'], strict_slashes=False)
-@swag_from('documentation/applications/post_application.yml', methods=['POST'])
+@swag_from('documentation/applications/post_application.yml')
 def post_application():
     """
-    Creates a application
+    Creates an application
     """
     if not request.get_json():
         abort(400, description="Not a JSON")
 
-    if 'name' not in request.get_json():
-        abort(400, description="Missing name")
-    if 'description' not in request.get_json():
-        abort(400, description="Missing description")
-    if 'price' not in request.get_json():
-        abort(400, description="Missing price")
+    if 'first_name' not in request.get_json():
+        abort(400, description="Missing first_name")
+    if 'last_name' not in request.get_json():
+        abort(400, description="Missing last_name")
+    if 'email' not in request.get_json():
+        abort(400, description="Missing email")
+    if 'phone' not in request.get_json():
+        abort(400, description="Missing phone")
+    if 'address' not in request.get_json():
+        abort(400, description="Missing address")
+    if 'date_of_birth' not in request.get_json():
+        abort(400, description="Missing date_of_birth")
+    if 'grade_applying_for' not in request.get_json():
+        abort(400, description="Missing grade_applying_for")
+    if 'parent_name' not in request.get_json():
+        abort(400, description="Missing parent_name")
+    if 'parent_contact' not in request.get_json():
+        abort(400, description="Missing parent_contact")
 
     data = request.get_json()
     instance = Application(**data)
@@ -80,12 +88,12 @@ def post_application():
 
 @app_views.route('/applications/<application_id>', methods=['PUT'],
                  strict_slashes=False)
-@swag_from('documentation/applications/put_application.yml', methods=['PUT'])
+@swag_from('documentation/applications/put_application.yml')
 def put_application(application_id):
     """
-    Updates a application
+    Updates an application
     """
-    application = storage.get(application, application_id)
+    application = storage.get(Application, application_id)
 
     if not application:
         abort(404)
@@ -103,29 +111,29 @@ def put_application(application_id):
     return make_response(jsonify(application.to_dict()), 200)
 
 
-@app_views.route('/applications/<application_id>/images', methods=['GET'],
+@app_views.route('/applications/<application_id>/documents', methods=['GET'],
                  strict_slashes=False)
-@swag_from('documentation/applications/images/get_images.yml', methods=['GET'])
-def get_images(application_id):
-    """ Retrieve images associated with a specific application. """
-    application = storage.get(application, application_id)
+@swag_from('documentation/applications/documents/get_documents.yml')
+def get_documents(application_id):
+    """ Retrieve documents associated with a specific application. """
+    application = storage.get(Application, application_id)
     if not application:
         abort(404)
-    list_images = []
-    for image in application.images:
-        list_images.append(image.to_dict())
+    list_documents = []
+    for document in application.documents:
+        list_documents.append(document.to_dict())
 
-    return jsonify(list_images)
+    return jsonify(list_documents)
 
 
-@app_views.route('/applications/<application_id>/images', methods=['POST'],
+@app_views.route('/applications/<application_id>/documents', methods=['POST'],
                  strict_slashes=False)
-@swag_from('documentation/applications/image/post_image.yml', methods=['POST'])
-def post_image(application_id):
+@swag_from('documentation/applications/documents/post_document.yml')
+def post_document(application_id):
     """
-    Upload images for a specific application.
+    Upload documents for a specific application.
     """
-    UPLOAD_FOLDER = "web_app/static/images/upload/application"
+    UPLOAD_FOLDER = "web_app/static/documents/upload/application"
 
     application = storage.get(Application, application_id)
     if not application:
@@ -137,7 +145,7 @@ def post_image(application_id):
     if not files:
         abort(400, description="No file uploaded")
     # get all the files
-    image_urls = []
+    file_paths = []
     for file in files:
         if file.filename == '':
             abort(404, description="No selected file")
@@ -146,23 +154,24 @@ def post_image(application_id):
             filepath = os.path.join(UPLOAD_FOLDER, filename)
             file.save(filepath)
 
-            # Create a new Image object
-            new_image = Image(url=filename, application_id=application_id)
-            new_image.save()
-            image_urls.append(filepath)
+            # Create a new Document object
+            new_document = Document(name=filename, file_path=filepath, application_id=application_id)
+            new_document.save()
+            file_paths.append(filepath)
         else:
             abort(404, description="Invalid file type")
-    if image_urls:
-        print(image_urls[0])
-        application.cover_img = image_urls[0].split('/')[-1]
+    if file_paths:
+        print(file_paths[0])
+        # Update the application with the first document path
+        application.document_path = file_paths[0]
         storage.save()
-    return jsonify(image_urls), 201
+    return jsonify(file_paths), 201
 
 
-# helper function for post_images()
+# helper function for post_document()
 def allowed_file(filename):
     """
     Check if the file is allowed based on the file extension.
     """
-    EXT = {'png', 'jpg', 'jpeg', 'gif'}
+    EXT = {'pdf', 'doc', 'docx'}
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in EXT
