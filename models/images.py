@@ -7,9 +7,9 @@ class Image(BaseModel, Base):
     """Representation of an image data and methods"""
     __tablename__ = 'images'
     url = Column(String(256), nullable=False)
-    product_id = Column(String(60), ForeignKey('products.id'), nullable=True)
+    application_id = Column(String(60), ForeignKey('applications.id'), nullable=True)
     user_id = Column(String(60), ForeignKey('users.id'), nullable=True)
-    product = relationship('Product', back_populates='images')
+    application = relationship('application', back_populates='images')
     user = relationship('User', back_populates='images')
 
     def __init__(self, *args, **kwargs):
@@ -20,9 +20,9 @@ class Image(BaseModel, Base):
         """Sets the URL for the image"""
         self.url = url
 
-    def set_product(self, product):
-        """Sets the product for the image"""
-        self.product_id = product.id
+    def set_application(self, application):
+        """Sets the application for the image"""
+        self.application_id = application.id
 
     def set_user(self, user):
         """Sets the user for the image"""

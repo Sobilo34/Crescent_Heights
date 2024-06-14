@@ -2,7 +2,7 @@
 """ Index api that returns the status and stats for all our tables """
 from models.category import Category
 from models.user import User
-from models.product import Product
+from models.application import Application
 from models.order import Order
 from models.review import Review
 from models.delivery import Delivery
@@ -21,8 +21,8 @@ def status():
 @app_views.route('/stats', methods=['GET'], strict_slashes=False)
 def number_objects():
     """ Retrieves the number of each objects by type """
-    classes = [User, Category, Product, Order, Delivery, Review, Image]
-    names = ["User", "Category", "Product", "Order", "Delivery", "Review",
+    classes = [User, Category, Application, Order, Delivery, Review, Image]
+    names = ["User", "Category", "Application", "Order", "Delivery", "Review",
              "Image"]
 
     num_objs = {}

@@ -26,7 +26,7 @@ class Category(BaseModel, Base):
     # Relationship to User model
     users = relationship('User', secondary=user_category,
                          back_populates='categories')
-    products = relationship('Product', back_populates='category')
+    applications = relationship('application', back_populates='category')
 
     def __init__(self, *args, **kwargs):
         """initializes Category"""
@@ -34,10 +34,10 @@ class Category(BaseModel, Base):
 
 
 """
-Association table for many-to-many relationship between products
+Association table for many-to-many relationship between applications
 and categories """
-product_category = Table('product_category', Base.metadata,
-                         Column('product_id', String(60),
-                                ForeignKey('products.id')),
+application_category = Table('application_category', Base.metadata,
+                         Column('application_id', String(60),
+                                ForeignKey('applications.id')),
                          Column('category_id', String(60),
                                 ForeignKey('categories.id')))

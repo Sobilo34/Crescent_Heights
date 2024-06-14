@@ -10,7 +10,7 @@ from sqlalchemy.orm import relationship
 from flask_login import UserMixin
 from hashlib import md5
 from models.order import Order
-from models.product import Product
+from models.application import Application
 from models.category import user_category, Category
 import bcrypt
 
@@ -29,7 +29,7 @@ class User(BaseModel, Base, UserMixin):
         is_admin = Column(Boolean, default=False)
         farm_name = Column(String(100), nullable=True)
         location = Column(String(100), nullable=True)
-        products = relationship('Product', back_populates='user')
+        # products = relationship('Product', back_populates='user')
         orders = relationship('Order', back_populates='user')
         reviews = relationship('Review', back_populates='user')
         images = relationship('Image', back_populates='user')

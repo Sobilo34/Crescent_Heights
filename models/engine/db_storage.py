@@ -7,7 +7,7 @@ import models
 from models.base_model import BaseModel, Base
 from models.user import User
 from models.category import Category
-from models.product import Product
+from models.application import Application
 from models.order import Order
 from models.delivery import Delivery
 from models.review import Review
@@ -17,7 +17,7 @@ import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-classes = {"User": User, "Category": Category, "Product": Product,
+classes = {"User": User, "Category": Category, "Application": Application,
            "Order": Order, "Delivery": Delivery, "Review": Review,
            "Image": Image}
 
@@ -29,17 +29,17 @@ class DBStorage:
 
     def __init__(self):
         """Instantiate a DBStorage object"""
-        AGRO_MYSQL_USER = getenv('AGRO_MYSQL_USER')
-        AGRO_MYSQL_PWD = getenv('AGRO_MYSQL_PWD')
-        AGRO_MYSQL_HOST = getenv('AGRO_MYSQL_HOST')
-        AGRO_MYSQL_DB = getenv('AGRO_MYSQL_DB')
-        AGRO_ENV = getenv('AGRO_ENV')
+        CHO_MYSQL_USER = getenv('CHO_MYSQL_USER')
+        CHO_MYSQL_PWD = getenv('CHO_MYSQL_PWD')
+        CHO_MYSQL_HOST = getenv('CHO_MYSQL_HOST')
+        CHO_MYSQL_DB = getenv('CHO_MYSQL_DB')
+        CHO_ENV = getenv('CHO_ENV')
         self.__engine = create_engine('mysql+mysqldb://{}:{}@{}/{}'.
-                                      format(AGRO_MYSQL_USER,
-                                             AGRO_MYSQL_PWD,
-                                             AGRO_MYSQL_HOST,
-                                             AGRO_MYSQL_DB))
-        if AGRO_ENV == "test":
+                                      format(CHO_MYSQL_USER,
+                                             CHO_MYSQL_PWD,
+                                             CHO_MYSQL_HOST,
+                                             CHO_MYSQL_DB))
+        if CHO_ENV == "test":
             Base.metadata.drop_all(self.__engine)
 
     def all(self, cls=None):
@@ -108,19 +108,19 @@ class DBStorage:
 
         return None
     
-    def find_product_by_id(self, product_id):
-        """
-        Find product by id, or None if not found
-        """
-        if not product_id:
-            return None
+    # def find_product_by_id(self, product_id):
+    #     """
+    #     Find product by id, or None if not found
+    #     """
+    #     if not product_id:
+    #         return None
 
-        all_products = self.all(Product)
-        for product in all_products.values():
-            if (product.id == product_id):
-                return product
+    #     all_products = self.all(Product)
+    #     for product in all_products.values():
+    #         if (product.id == product_id):
+    #             return product
 
-        return None
+    #     return None
 
     def count(self, cls=None):
         """

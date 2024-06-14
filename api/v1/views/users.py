@@ -171,15 +171,15 @@ def get_user_orders(user_id):
         }
         obj['user'] = user_info
 
-        # Add product information to the order dictionary
-        product_info = {
-            'id': order.product.id,
-            'name': order.product.name,
-            'description': order.product.description,
-            'price': order.product.price,
-            'image': order.product.cover_img
+        # Add application information to the order dictionary
+        application_info = {
+            'id': order.application.id,
+            'name': order.application.name,
+            'description': order.application.description,
+            'price': order.application.price,
+            'image': order.application.cover_img
         }
-        obj['product'] = product_info
+        obj['application'] = application_info
 
         list_orders.append(obj)
 

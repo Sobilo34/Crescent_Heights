@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Extra Curricullum</title>
+  <title>Extra-Curriculum</title>
   <link rel="icon" href="../static/images/tch.jpg" type="image/x-icon">
   <link rel="stylesheet" href="../static/styles/index.css">
   <link rel="stylesheet" href="../static/styles/extra_curicullar.css">
@@ -12,7 +12,7 @@
 </head>
 <body>
   <nav id="lop"></nav>
-  <script src ="../static/scripts/index.js"></script>
+  <script src="../static/scripts/index.js"></script>
 
   <header>
     <div class="header_img">
@@ -38,7 +38,7 @@
       <div class="collapse_content">
 
         <div class="dropdown">
-          <a href="index.html">
+          <a href="{{ url_for('index') }}">
               <button class="dropbtn" id="the_home">Home</button>
           </a>
         </div>
@@ -46,22 +46,22 @@
         <div class="dropdown">
             <button class="dropbtn">About</button>
             <div class="dropdown-content" style="position: absolute; left: -50px;">
-              <a href="about.html">History/Values</a>
-              <a href="govboard.html">Governing Board</a>
-              <a href="Principal.html">Principal’s Message</a>
-              <a href="anthem.html">Anthem/Mission/Vision</a>
-              <a href="gallery.html">Gallery</a>
+              <a href="{{ url_for('about') }}">History/Values</a>
+              <a href="{{ url_for('govboard') }}">Governing Board</a>
+              <a href="{{ url_for('principal') }}">Principal’s Message</a>
+              <a href="{{ url_for('anthem') }}">Anthem/Mission/Vision</a>
+              <a href="{{ url_for('gallery') }}">Gallery</a>
             </div>
         </div>
 
         <div class="dropdown">
             <button class="dropbtn">School</button>
             <div class="dropdown-content" style="position: absolute; left: -50px;">
-              <a href="curricullum.html">Academic Curricullum</a>
-              <a href="extra curricullum.html">Co-Curricullum</a>
+              <a href="{{ url_for('curriculum') }}">Academic Curricullum</a>
+              <a href="{{ url_for('extra_curriculum') }}">Co-Curricullum</a>
               <a href="#">School-Calender</a>
               <a href="#">List Of Books</a>
-              <a href="religios.html">Religious</a>
+              <a href="{{ url_for('religious') }}">Religious</a>
             </div>
         </div>
 
@@ -69,8 +69,8 @@
         <div class="dropdown">
             <button class="dropbtn">Admission</button>
             <div class="dropdown-content" id="admission" style="position: absolute; left: -40px;">
-              <a href="admission.html">Admission Process</a>
-              <a href="fees.html">Fees/Payment</a>
+              <a href="{{ url_for('admission') }}">Admission Process</a>
+              <a href="{{ url_for('fees') }}">Fees/Payment</a>
             </div>
         </div>
 
@@ -78,8 +78,8 @@
         <div class="dropdown">
           <button class="dropbtn">Login Portal</button>
           <div class="dropdown-content" id="portal" style="position: absolute; left: -40px;">
-            <a href="portal.html">Parent Portal</a>
-            <a href="portal.html">Teachers Portal</a>
+            <a href="{{ url_for('portal') }}">Parent Portal</a>
+            <a href="{{ url_for('portal') }}">Teachers Portal</a>
           </div>
         </div>
 
@@ -124,7 +124,7 @@
 <div class="banner"></div>
 <div class="banner_fill">
   <h1>Co-Curricullum Activities</h1>
-  <a href="index.html">Home</a>
+  <a href="{{ url_for('index') }}">Home</a>
   <a>Co-Curricullum Activities</a>
 </div>
 <!--a href="curricullum.html"><button id="prev">Previous</button></a> 
@@ -199,8 +199,8 @@
 
 
 
-<!-- Existing sections... -->
-<footer class="footer">
+ <!-- Footer Section... -->
+ <footer class="footer">
   <div class="container">
     <div class="footer-top">
       <div class="footer-column">
@@ -212,11 +212,11 @@
       <div class="footer-column">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="../templates/index.html">Home</a></li>
-          <li><a href="../templates/about.html">About Us</a></li>
-          <li><a href="../templates/extra curricullum.html">Programs</a></li>
-          <li><a href="../templates/admission.html">Admissions</a></li>
-          <li><a href="../templates/fees.html">Payment</a></li>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+          <li><a href="{{ url_for('extra_curriculum') }}">Programs</a></li>
+          <li><a href="{{ url_for('admission') }}">Admissions</a></li>
+          <li><a href="{{ url_for('fees') }}">Payment</a></li>
         </ul>
       </div>
       <div class="footer-column">
@@ -237,3 +237,4 @@
 </footer>
 </body>
 </html>
+

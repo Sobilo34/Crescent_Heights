@@ -70,7 +70,7 @@
       <div class="collapse_content">
 
         <div class="dropdown">
-          <a href="index.html">
+          <a href="{{ url_for('index') }}">
               <button class="dropbtn" id="the_home">Home</button>
           </a>
         </div>
@@ -78,22 +78,22 @@
         <div class="dropdown">
             <button class="dropbtn">About</button>
             <div class="dropdown-content" style="position: absolute; left: -50px;">
-              <a href="about.html">History/Values</a>
-              <a href="govboard.html">Governing Board</a>
-              <a href="Principal.html">Principal’s Message</a>
-              <a href="anthem.html">Anthem/Mission/Vision</a>
-              <a href="gallery.html">Gallery</a>
+              <a href="{{ url_for('about') }}">History/Values</a>
+              <a href="{{ url_for('govboard') }}">Governing Board</a>
+              <a href="{{ url_for('principal') }}">Principal’s Message</a>
+              <a href="{{ url_for('anthem') }}">Anthem/Mission/Vision</a>
+              <a href="{{ url_for('gallery') }}">Gallery</a>
             </div>
         </div>
 
         <div class="dropdown">
             <button class="dropbtn">School</button>
             <div class="dropdown-content" style="position: absolute; left: -50px;">
-              <a href="curricullum.html">Academic Curricullum</a>
-              <a href="extra curricullum.html">Co-Curricullum</a>
+              <a href="{{ url_for('curriculum') }}">Academic Curricullum</a>
+              <a href="{{ url_for('extra_curriculum') }}">Co-Curricullum</a>
               <a href="#">School-Calender</a>
               <a href="#">List Of Books</a>
-              <a href="religios.html">Religious</a>
+              <a href="{{ url_for('religious') }}">Religious</a>
             </div>
         </div>
 
@@ -101,8 +101,8 @@
         <div class="dropdown">
             <button class="dropbtn">Admission</button>
             <div class="dropdown-content" id="admission" style="position: absolute; left: -40px;">
-              <a href="admission.html">Admission Process</a>
-              <a href="fees.html">Fees/Payment</a>
+              <a href="{{ url_for('admission') }}">Admission Process</a>
+              <a href="{{ url_for('fees') }}">Fees/Payment</a>
             </div>
         </div>
 
@@ -110,8 +110,8 @@
         <div class="dropdown">
           <button class="dropbtn">Login Portal</button>
           <div class="dropdown-content" id="portal" style="position: absolute; left: -40px;">
-            <a href="portal.html">Parent Portal</a>
-            <a href="portal.html">Teachers Portal</a>
+            <a href="{{ url_for('portal') }}">Parent Portal</a>
+            <a href="{{ url_for('portal') }}">Teachers Portal</a>
           </div>
         </div>
 
@@ -120,7 +120,6 @@
     </div>
 
   </header>
-
       <!-- Collapse Script -->
       <script>
         // Add event listener to the button

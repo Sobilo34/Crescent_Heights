@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""  API actions for Product """
+"""  API actions for Application """
 from werkzeug.utils import secure_filename
 from models.user import User
-from models.product import Product
+from models.application import Application
 from models.order import Order
 from models.review import Review
 from models import storage
@@ -36,15 +36,15 @@ def get_orders():
         }
         obj['user'] = user
 
-        # Add product information to the order dictionary
-        product = {
-            'id': order.product.id,
-            'name': order.product.name,
-            'description': order.product.description,
-            'price': order.product.price,
-            'image': order.product.cover_img
+        # Add Application information to the order dictionary
+        Application = {
+            'id': order.Application.id,
+            'name': order.Application.name,
+            'description': order.Application.description,
+            'price': order.Application.price,
+            'image': order.Application.cover_img
         }
-        obj['product'] = product
+        obj['Application'] = Application
 
         list_orders.append(obj)
 
@@ -93,8 +93,8 @@ def post_order():
     print(request.get_json())
     if 'user_id' not in request.get_json():
         abort(401, description="Missing user_id")
-    if 'product_id' not in request.get_json():
-        abort(402, description="Missing product_id")
+    if 'Application_id' not in request.get_json():
+        abort(402, description="Missing Application_id")
     if 'quantity' not in request.get_json():
         abort(403, description="Missing quantity")
     if 'total_price' not in request.get_json():

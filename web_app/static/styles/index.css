@@ -92,6 +92,10 @@ text-shadow: 0.5px 0.5px rgb(62, 73, 85);
 
 }
 
+button:hover, button:checked, button:active {
+  background-color: transparent;
+}
+
 .dropbtn {
 background-color: transparent;
 color: white;
@@ -1838,7 +1842,7 @@ a.btn,
 }
 
 .footer {
-  margin-top: 10%;
+  margin-top: 5%;
   background-color: rgb(0, 0, 22);
   color: wheat;
   padding: 50px 0;

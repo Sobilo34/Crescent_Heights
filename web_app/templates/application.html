@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Form</title>
+  <link rel="icon" href="../static/images/tch.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../static/styles/index.css">
+  <link rel="stylesheet" href="../static/styles/govboard.css">
+  <link rel="stylesheet" href="../static/styles/styles.css">
+
+  <style>
+    .form_container {
+        margin-top: 400px;
+        margin-left: 50%;
+        margin-bottom: 0px;
+        overflow-y: hidden;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    .form-group input[type="radio"],
+    .form-group input[type="checkbox"] {
+        width: auto;
+    }
+    .form-group textarea {
+        resize: vertical;
+    }
+    .form-group .form-check {
+        display: flex;
+        align-items: center;
+    }
+    .form-group .form-check label {
+        margin-left: 5px;
+    }
+    .form-group button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .form-group button:hover {
+        background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <nav id="lop"></nav>
+  <script src ="../static/scripts/index.js"></script>
+
+  <header>
+    <div class="header_img">
+      <img src="../static/images/tch.jpg" class="header_logo"></img>
+      <img src="../static/images/nom.jpg" class="header_icon"></img>   
+    </div>
+
+    <div class="menu_bar">
+
+      <button for="menu_checkbox" class="collapse">
+        <hr class="collapse_line" id="line1">
+        <hr class="collapse_line" id="line2">
+        <hr class="collapse_line" id="line3">
+      </button>
+
+      <script>
+        document.querySelector('.collapse').addEventListener('click', function() {
+            this.classList.toggle('active');
+          });
+
+      </script>
+            
+      <div class="collapse_content">
+
+        <div class="dropdown">
+          <a href="{{ url_for('index') }}">
+              <button class="dropbtn" id="the_home">Home</button>
+          </a>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">About</button>
+            <div class="dropdown-content" style="position: absolute; left: -50px;">
+              <a href="{{ url_for('about') }}">History/Values</a>
+              <a href="{{ url_for('govboard') }}">Governing Board</a>
+              <a href="{{ url_for('principal') }}">Principal’s Message</a>
+              <a href="{{ url_for('anthem') }}">Anthem/Mission/Vision</a>
+              <a href="{{ url_for('gallery') }}">Gallery</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">School</button>
+            <div class="dropdown-content" style="position: absolute; left: -50px;">
+              <a href="{{ url_for('curriculum') }}">Academic Curricullum</a>
+              <a href="{{ url_for('extra_curriculum') }}">Co-Curricullum</a>
+              <a href="#">School-Calender</a>
+              <a href="#">List Of Books</a>
+              <a href="{{ url_for('religious') }}">Religious</a>
+            </div>
+        </div>
+
+
+        <div class="dropdown">
+            <button class="dropbtn">Admission</button>
+            <div class="dropdown-content" id="admission" style="position: absolute; left: -40px;">
+              <a href="{{ url_for('admission') }}">Admission Process</a>
+              <a href="{{ url_for('fees') }}">Fees/Payment</a>
+            </div>
+        </div>
+
+
+        <div class="dropdown">
+          <button class="dropbtn">Login Portal</button>
+          <div class="dropdown-content" id="portal" style="position: absolute; left: -40px;">
+            <a href="{{ url_for('portal') }}">Parent Portal</a>
+            <a href="{{ url_for('portal') }}">Teachers Portal</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </header>
+
+      <!-- Collapse Script -->
+      <script>
+        // Add event listener to the button
+        const collapseButton = document.querySelector('.collapse');
+        const content = document.querySelector('.collapse_content');
+
+        collapseButton.addEventListener('click', () => {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+
+        var coll = document.getElementsByClassName("dropbtn");
+        var i;
+
+        for (i = 0; i < coll.length; i++)
+        {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+
+            if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+            }
+
+            else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+
+          });
+        }
+      </script>
+
+
+<img src="../static/images/papi.jpg" class="gov_img">
+<div class="banner"></div>
+<div class="banner_fill">
+  <h1>Application Form</h1>
+  <a href="{{ url_for('index') }}">Home</a>
+  <a>Application Form</a>
+</div>
+
+<!-- Application Form -->
+<div class="form_container">
+    <h2>Student Application Form</h2>
+    <form action="/submit_application" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="full_name">Surname Name</label>
+            <input type="text" id="full_name" name="full_name" required>
+        </div>
+        <div class="form-group">
+            <label for="full_name">First Name</label>
+            <input type="text" id="full_name" name="full_name" required>
+        </div>
+        <div class="form-group">
+            <label for="full_name">Middle Name</label>
+            <input type="text" id="full_name" name="full_name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <div class="form-check">
+                <input type="radio" id="gender_male" name="gender" value="male" required>
+                <label for="gender_male">Male</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="gender_female" name="gender" value="female">
+                <label for="gender_female">Female</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="gender_other" name="gender" value="other">
+                <label for="gender_other">Other</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="qualification">Last Class Attended</label>
+            <input type="text" id="qualification" name="qualification" required>
+        </div>
+        <div class="form-group">
+            <label for="qualification">Next Preferred Class</label>
+            <input type="text" id="qualification" name="qualification" required>
+        </div>
+        <div class="form-group">
+            <label for="course">Department of Choice (Only for Senior Classes)</label>
+            <select id="course" name="course" required>
+                <option value="">Select a department</option>
+                <option value="computer_science">Science Department</option>
+                <option value="business_management">Commercial Department</option>
+                <option value="engineering">Humanity Department</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="passport">Upload Passport</label>
+            <input type="file" id="passport" name="passport" required>
+        </div>
+        <div class="form-group">
+            <label for="documents">Upload Last Testimonial Received</label>
+            <input type="file" id="documents" name="documents" multiple required>
+        </div>
+        <div class="form-group">
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit">Submit Application</button>
+        </div>
+    </form>
+</div>
+
+<!--a href="about.html"><button id="prev">Previous</button></a> 
+<a href="Principal.html"><button id="next">Next</button></a-->
+
+
+ <!-- Footer Section... -->
+ <footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Odo Aarin Oyo state, Nigeria</p>
+        <p>Email: info@example.com</p>
+        <p>Phone: +224 803 567 890</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+          <li><a href="{{ url_for('extra_curriculum') }}">Programs</a></li>
+          <li><a href="{{ url_for('admission') }}">Admissions</a></li>
+          <li><a href="{{ url_for('fees') }}">Payment</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Connect With Us</h3>
+        <ul class="social-icons">
+          <li><a href="#"><img src="../static/images/facebook-removebg-preview.png" alt="Facebook" class="img-fluid"></a></li>
+          <li><a href="#"><img src="../static/images/twitter-removebg-preview.png" alt="Twitter" class="img-fluid"></a></li>
+          <li><a href="#"><img src="../static/images/instagram-removebg-preview.png" alt="Instagram" class="img-fluid"></a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Crescent Heights. All Rights Reserved.</p><br>
+      <p>DEVELOPED BY SOBIL</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-storage_t = getenv("AGRO_TYPE_STORAGE")
+storage_t = getenv("CHO_TYPE_STORAGE")
 
 if storage_t == "db":
     from models.engine.db_storage import DBStorage
