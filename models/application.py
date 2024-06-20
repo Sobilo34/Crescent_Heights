@@ -11,7 +11,7 @@ class Application(BaseModel, Base):
     email = Column(String(128), nullable=False, unique=True)
     phone = Column(String(15), nullable=False)
     address = Column(Text, nullable=False)
-    date_of_birth = Column(Date, nullable=False)
+    # date_of_birth = Column(Date, nullable=False)
     grade_applying_for = Column(String(10), nullable=False)
     previous_school = Column(String(128), nullable=True)
     parent_name = Column(String(128), nullable=False)

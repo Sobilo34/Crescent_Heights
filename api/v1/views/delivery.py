@@ -18,7 +18,7 @@ def get_deliveries():
     return jsonify(list_deliveries)
 
 
-@app_views.route('/deliveries', method=['POST'], strict_slashes=False)
+@app_views.route('/deliveries', methods=['POST'], strict_slashes=False)
 def post_deliveries():
     """
     Create new delivery
@@ -47,7 +47,7 @@ def post_deliveries():
     return make_response(jsonify(instance.to_dict()), 201)
 
 
-@app_views.route('/deliveries/<id>', method=['Get'], strict_slashers=False)
+@app_views.route('/deliveries/<id>', methods=['Get'], strict_slashes=False)
 def view_user_delivery(id):
     """
     Retrieve specific delivery by ID.

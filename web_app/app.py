@@ -3,13 +3,11 @@
 import requests
 import json
 from models import storage
-# from models.student import Student
 from models.application import Application
-from os import environ, getenv
+from os import getenv
 
 from flask import Flask, abort, render_template, request, redirect, session, url_for, flash, jsonify
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
-
 import uuid
 
 app = Flask(__name__)
@@ -18,13 +16,11 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
-
 @app.teardown_appcontext
 def close_db(error):
     """ Remove the current SQLAlchemy Session """
     storage.close()
 
-# Inject current_user into all templates
 @app.context_processor
 def inject_user():
     return dict(current_user=current_user)
@@ -32,7 +28,6 @@ def inject_user():
 @login_manager.user_loader
 def load_user(user_id):
     return storage.find_user_by_id(user_id)
-
 
 @app.route('/index', strict_slashes=False)
 def index():
@@ -62,7 +57,7 @@ def curriculum():
 @app.route('/extra_curriculum', strict_slashes=False)
 def extra_curriculum():
     """ the extra_curriculum page of the CHO Website """
-    return render_template('extra curricullum.html', cache_id=str(uuid.uuid4()))
+    return render_template('extra_curricullum.html', cache_id=str(uuid.uuid4()))
 
 @app.route('/fees', strict_slashes=False)
 def fees():
@@ -94,26 +89,23 @@ def portal():
     """ the portal page of the CHO Website """
     return render_template('portal.html', cache_id=str(uuid.uuid4()))
 
-
 @app.route('/application', strict_slashes=False, methods=['GET', 'POST'])
 def application():
     """ the page for submitting an application """
     if request.method == 'POST':
         url = getenv('CHO_API_URL') + '/applications'
         data = request.form.to_dict()
-
         data_json = json.dumps(data)
         response = requests.post(url, data=data_json, headers={'Content-Type': 'application/json'})
         if response.status_code == 201:
             flash('Application submitted successfully', 'alert alert-success')
-            return redirect(url_for('application_page'))
+            return redirect(url_for('application'))
         else:
             flash('Application submission failed', 'alert alert-danger')
-            return redirect(url_for('application_page'))
+            return redirect(url_for('application'))
     return render_template('application.html', cache_id=str(uuid.uuid4()))
 
 @app.route('/signup', methods=['GET', 'POST'], strict_slashes=False)
-@app.route('/signup', methods=['GET', 'POST'])
 def signup_page():
     """ The page for creating a user account """
     if request.method == 'POST':
@@ -155,7 +147,6 @@ def signup_page():
     else:
         return render_template('signup.html', cache_id=str(uuid.uuid4()))
 
-
 @app.route('/login', methods=['GET', 'POST'], strict_slashes=False)
 def login_page():
     """ the page for signing/logging in"""
@@ -170,7 +161,7 @@ def login_page():
             user = Student.from_dict(user_data)
             login_user(user)
             flash('Login successful', 'alert alert-success')
-            return redirect(url_for('home'))
+            return redirect(url_for('index'))
         else:
             flash('Please check your login credentials', 'alert alert-danger')
             return redirect(url_for('login_page'))
@@ -205,7 +196,6 @@ def profile():
 
     return render_template('profile.html', cache_id=str(uuid.uuid4()), user=user)
 
-
 @login_required
 @app.route('/application/<application_id>', strict_slashes=False, methods=['GET', 'POST', 'DELETE'])
 def application_detail(application_id):
@@ -218,7 +208,7 @@ def application_detail(application_id):
             return render_template('application_detail.html', cache_id=str(uuid.uuid4()), application=application)
         else:
             flash('Application not found', 'alert alert-danger')
-            return redirect(url_for('application_page'))
+            return redirect(url_for('application'))
 
     if request.method == 'POST':
         data = request.form.to_dict()
@@ -235,7 +225,7 @@ def application_detail(application_id):
         response = requests.delete(url)
         if response.status_code == 200:
             flash('Application deleted successfully', 'alert alert-success')
-            return redirect(url_for('application_page'))
+            return redirect(url_for('application'))
         else:
             flash('Application deletion failed', 'alert alert-danger')
         return redirect(url_for('application_detail', application_id=application_id))
@@ -250,9 +240,8 @@ def logout():
     flash('Logout successfully', 'alert alert-success')
     return redirect(url_for('index'))
 
-
 if __name__ == "__main__":
     """ start app """
-    port = getenv('CHO_API_PORT')
-    host = getenv('CHO_API_HOST')
-    app.run(host, port=5000, debug=True)
+    port = int(getenv('CHO_API_PORT', 5000))
+    host = getenv('CHO_API_HOST', '0.0.0.0')
+    app.run(host=host, port=port, debug=True)

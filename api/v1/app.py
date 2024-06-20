@@ -32,7 +32,7 @@ def not_found(error):
 
 
 app.config['SWAGGER'] = {
-    'title': 'AgroMarket API Version 1',
+    'title': 'Crescent Heights API Version 1',
     'uiversion': 3
 }
 
