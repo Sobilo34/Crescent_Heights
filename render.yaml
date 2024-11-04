@@ -3,6 +3,7 @@ services:
     name: CrescentHeights
     env: production
     plan: starter
+    runtime: python # specify the runtime here
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python app.py"
     envVars:
