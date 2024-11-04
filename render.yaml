@@ -3,7 +3,7 @@ services:
     name: CrescentHeights
     env: production
     plan: starter
-    rootDir: web_app/templates/index.html  # specify the root directory here
+    rootDir: ./ # specify the root directory here
     runtime: python # specify the runtime here
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python app.py"
