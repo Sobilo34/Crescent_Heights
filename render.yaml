@@ -3,8 +3,10 @@ services:
     name: CrescentHeights
     env: production
     plan: starter
-    rootDir: ./ # specify the root directory here
-    runtime: python # specify the runtime here
+    # specify the root directory here
+    rootDir: ./
+    # specify the runtime here
+    runtime: python
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python app.py"
     envVars:
