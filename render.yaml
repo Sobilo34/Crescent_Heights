@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: CrescentHeights
+    env: production
+    plan: starter
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: FLASK_ENV
+        value: "production"
+      - key: DB_URL
+        value: "your-database-url"
+      - key: SECRET_KEY
+        value: "your-secret-key"
+      - key: APP_SETTINGS
+        value: "config.ProductionConfig"
